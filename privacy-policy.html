@@ -1,705 +1,398 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Política de Privacidad de ALERTA — Privacy Policy</title>
-<style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-        line-height: 1.7;
-        color: #1f2328;
-        background: #ffffff;
-        padding: 24px 16px 48px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    .wrap {
-        max-width: 960px;
-        margin: 0 auto;
-    }
-
-    /* -------- Barra superior selector de idioma -------- */
-    .lang-bar {
-        background: #f1f5f9;
-        border-radius: 14px;
-        padding: 16px 22px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 18px;
-        margin-bottom: 28px;
-    }
-    .lang-bar button {
-        font-family: inherit;
-        font-size: 1.35rem;
-        font-weight: 600;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        padding: 2px 4px;
-        color: #1f6feb;
-        transition: color 0.15s ease;
-    }
-    .lang-bar button:hover {
-        color: #0550ae;
-        text-decoration: underline;
-    }
-    .lang-bar button.active {
-        color: #0550ae;
-    }
-    .lang-bar .sep {
-        color: #94a3b8;
-        font-size: 1.4rem;
-        font-weight: 400;
-        user-select: none;
-    }
-
-    /* -------- Cápsula de idioma ES / EN -------- */
-    .badge-lang {
-        display: inline-block;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #ffffff;
-        background: #1967d2;
-        padding: 10px 20px;
-        border-radius: 8px;
-        letter-spacing: 1px;
-        margin: 10px 0 22px;
-    }
-    .badge-lang.en { background: #1967d2; }
-
-    /* -------- Títulos -------- */
-    h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        line-height: 1.15;
-        color: #111827;
-        margin-bottom: 26px;
-        letter-spacing: -0.02em;
-    }
-    @media (max-width: 640px) {
-        h1 { font-size: 2.1rem; }
-    }
-
-    .updated {
-        font-size: 1.3rem;
-        font-weight: 500;
-        color: #4b5563;
-        margin-bottom: 28px;
-    }
-    .updated .placeholder {
-        color: #475569;
-        font-weight: 600;
-    }
-
-    p {
-        font-size: 1.15rem;
-        margin-bottom: 18px;
-        color: #1f2328;
-    }
-
-    /* -------- Nota destacada (fondo azul claro, barra azul) -------- */
-    .note {
-        background: #eff6ff;
-        border-left: 6px solid #2563eb;
-        border-radius: 6px;
-        padding: 20px 24px;
-        margin: 28px 0 32px;
-    }
-    .note p {
-        margin-bottom: 0;
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: #1e3a8a;
-        line-height: 1.55;
-    }
-
-    h2 {
-        font-size: 2.1rem;
-        font-weight: 800;
-        color: #111827;
-        margin-top: 44px;
-        margin-bottom: 16px;
-        letter-spacing: -0.01em;
-    }
-
-    ul, ol {
-        margin: 10px 0 22px 28px;
-    }
-    li {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-        color: #1f2328;
-    }
-    li::marker { color: #4b5563; }
-
-    strong { color: #0f172a; font-weight: 700; }
-
-    code {
-        background: #f3f4f6;
-        border: 1px solid #e5e7eb;
-        color: #0b5cab;
-        padding: 2px 6px;
-        border-radius: 5px;
-        font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-        font-size: 0.95em;
-    }
-
-    a {
-        color: #2563eb;
-        text-decoration: none;
-        font-weight: 500;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de Privacidad / Privacy Policy - ALERTA</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; background: #f7f7f7; color: #222; }
+    .container { max-width: 900px; margin: 24px auto; padding: 24px; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    h1, h2 { color: #111; }
+    h1 { margin-top: 0; }
+    p, li { font-size: 16px; }
+    .meta { color: #555; font-size: 14px; }
+    .note { background: #f0f6ff; border-left: 4px solid #0b57d0; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+    .lang-nav { background: #eef2f7; padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; text-align: center; }
+    .lang-nav a { margin: 0 12px; font-weight: bold; }
+    .lang-section { margin-top: 40px; padding-top: 32px; border-top: 2px solid #e0e0e0; }
+    .lang-label { display: inline-block; background: #0b57d0; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 14px; margin-bottom: 16px; }
+    code { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+    a { color: #0b57d0; text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    /* -------- Control de idioma: mostrar un bloque, ocultar el otro -------- */
-    [data-lang="es"] { display: block; }
-    [data-lang="en"] { display: none; }
-
-    html[data-active-lang="en"] [data-lang="es"] { display: none; }
-    html[data-active-lang="en"] [data-lang="en"] { display: block; }
-
-    /* -------- Pie -------- */
-    footer {
-        margin-top: 64px;
-        padding-top: 22px;
-        border-top: 1px solid #e5e7eb;
-        color: #6b7280;
-        font-size: 0.98rem;
-        text-align: center;
-    }
-
-    @media (max-width: 520px) {
-        body { padding: 14px 10px 32px; }
-        .lang-bar { padding: 12px 14px; gap: 10px; }
-        .lang-bar button { font-size: 1.05rem; }
-        .lang-bar .sep { font-size: 1.1rem; }
-        .badge-lang { font-size: 1.15rem; padding: 8px 14px; }
-        h2 { font-size: 1.55rem; }
-        p, li { font-size: 1.02rem; }
-        .note p { font-size: 1.05rem; }
-    }
-</style>
+  </style>
 </head>
 <body>
-<div class="wrap">
+  <main class="container">
 
-    <!-- ============ SELECTOR DE IDIOMA ============ -->
-    <div class="lang-bar" role="tablist" aria-label="Language selector">
-        <button id="btn-es" class="active" onclick="setLang('es')" type="button">Español</button>
-        <span class="sep">|</span>
-        <button id="btn-en" onclick="setLang('en')" type="button">English</button>
-    </div>
+    <nav class="lang-nav" aria-label="Idioma / Language">
+      <a href="#espanol">Español</a>
+      <span>|</span>
+      <a href="#english">English</a>
+    </nav>
 
-    <!-- ============ CÁPSULA DE IDIOMA ============ -->
-    <span class="badge-lang" data-lang="es">ES</span>
-    <span class="badge-lang en" data-lang="en">EN</span>
+    <!-- ==================== ESPAÑOL ==================== -->
+    <section id="espanol" class="lang-section" style="margin-top:0;padding-top:0;border-top:none;">
+      <span class="lang-label">ES</span>
+      <h1>Política de Privacidad de ALERTA</h1>
+      <p class="meta"><strong>Última actualización:</strong> 25 de Octubre de 2024</p>
 
-    <!-- ================================================================== -->
-    <!-- ======================== CONTENIDO ESPAÑOL ======================= -->
-    <!-- ================================================================== -->
-    <div data-lang="es">
+      <p>
+        Esta Política de Privacidad describe cómo la aplicación <strong>ALERTA</strong>
+        (paquete: <code>com.wolfrang1996.alerta</code>; en inglés puede mostrarse como <strong>ALERT</strong>)
+        recopila, usa, almacena y protege la información cuando usted utiliza nuestros servicios.
+      </p>
 
-        <h1>Política de Privacidad de ALERTA</h1>
+      <div class="note">
+        <strong>Nota sobre esta versión:</strong> esta es una <strong>versión de prueba para testers</strong>.
+        Todas las funciones están desbloqueadas. <strong>No incluye compras dentro de la aplicación
+        ni procesamiento de pagos.</strong> No utiliza Google Play Billing.
+      </div>
 
-        <p class="updated">Última actualización:
-            <span class="placeholder">[CAMBIAR EL DÍA QUE SUBAS A PLAY CONSOLE]</span>
-        </p>
+      <h2>1. Responsable del tratamiento</h2>
+      <ul>
+        <li><strong>Aplicación:</strong> ALERTA</li>
+        <li><strong>Desarrollador:</strong> Wolfrang1996</li>
+        <li><strong>Correo de contacto:</strong> <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a></li>
+      </ul>
 
-        <p>Esta Política de Privacidad describe cómo la aplicación <strong>ALERTA</strong>
-        (paquete: <code>com.wolfrang1996.alerta</code>; en inglés puede mostrarse como
-        <strong>ALERT</strong>) recopila, usa, almacena y protege la información cuando usted
-        utiliza nuestros servicios.</p>
+      <h2>2. Descripción general</h2>
+      <p>
+        ALERTA es una aplicación para dispositivos Android que monitoriza eventos del sistema y reproduce
+        <strong>alertas por voz</strong> (texto a voz / TTS) cuando detecta cambios relevantes configurados
+        por el usuario, incluyendo de forma no exhaustiva:
+      </p>
+      <ul>
+        <li>Conexión o desconexión de Wi-Fi, datos móviles o Ethernet.</li>
+        <li>Estado del cargador y nivel de batería.</li>
+        <li>Temperatura del dispositivo (núcleos del procesador y/o batería, cuando el sistema lo permite).</li>
+        <li>Uso de memoria RAM y espacio libre de almacenamiento.</li>
+        <li>Consumo de datos móviles (si el usuario activa esta alerta).</li>
+        <li>Alertas programadas personalizadas (hasta 10, con texto y hora definidos por el usuario).</li>
+        <li>Anuncio de la hora en punto (si el usuario lo activa).</li>
+      </ul>
 
-        <div class="note">
-            <p><strong>Nota sobre esta versión:</strong> esta es una versión de prueba para
-            testers. Todas las funciones están desbloqueadas. No incluye compras dentro de la
-            aplicación ni procesamiento de pagos. No utiliza Google Play Billing.</p>
-        </div>
+      <h2>3. Datos que utiliza la aplicación</h2>
+      <p>
+        ALERTA está diseñada para funcionar <strong>principalmente de forma local</strong> en el dispositivo
+        del usuario. La App puede acceder a información del dispositivo necesaria para su funcionamiento:
+      </p>
+      <ul>
+        <li>Estado de conectividad (Wi-Fi, datos móviles, Ethernet u otros tipos de red).</li>
+        <li>Estado de carga y nivel de batería.</li>
+        <li>Información térmica del dispositivo (temperatura de núcleos y/o batería).</li>
+        <li>Uso de memoria RAM y espacio libre de almacenamiento interno.</li>
+        <li>Consumo de datos móviles en tiempo real (solo si el usuario activa el monitoreo).</li>
+        <li>Datos del acelerómetro (solo para detectar agitación del dispositivo y pausar temporalmente las alertas de voz, si el usuario activa esta función).</li>
+        <li>Preferencias del usuario: idioma, tipos de alerta, umbrales, voces TTS, sensibilidad de agitación, intervalos de monitoreo, etc.</li>
+      </ul>
+      <p>
+        Esta información se <strong>procesa en el dispositivo</strong> para generar alertas, notificaciones y mensajes de voz.
+        ALERTA <strong>no vende</strong> datos personales ni los utiliza con fines publicitarios.
+      </p>
 
-        <h2>1. Responsable del tratamiento</h2>
-        <ul>
-            <li><strong>Aplicación:</strong> ALERTA</li>
-            <li><strong>Desarrollador:</strong> Wolfrang1996</li>
-            <li><strong>Correo de contacto:</strong>
-                <a href="mailto:camino.jose2025@gmail.com">camino.jose2025@gmail.com</a>
-            </li>
-        </ul>
+      <h2>4. Permisos del sistema Android</h2>
+      <p>Para ofrecer sus funciones, ALERTA puede solicitar permisos del sistema, tales como:</p>
+      <ul>
+        <li><strong>Red e Internet:</strong> detectar cambios de conectividad y compatibilidad del dispositivo. La App no transmite datos personales a servidores del desarrollador.</li>
+        <li><strong>Wi-Fi y estado de red:</strong> avisar cuando cambia la conexión.</li>
+        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> detectar cambios de conectividad móvil; no se usa para identificar al usuario, realizar llamadas ni crear perfiles.</li>
+        <li><strong>Servicio en primer plano:</strong> mantener el monitoreo activo con notificación visible al usuario.</li>
+        <li><strong>Notificaciones:</strong> informar del estado del servicio y alertas (Android 13+).</li>
+        <li><strong>Audio y vibración:</strong> reproducir alertas por voz y avisos hápticos.</li>
+        <li><strong>Inicio automático:</strong> reiniciar el servicio tras encender el dispositivo, si el usuario lo habilita.</li>
+        <li><strong>Optimización de batería:</strong> solicitar al usuario excluir la App de restricciones, si es necesario para el monitoreo en segundo plano.</li>
+      </ul>
+      <p>
+        <strong>Ubicación:</strong> ALERTA <strong>no solicita ni utiliza permisos de ubicación</strong> ni GPS
+        para rastrear al usuario.
+      </p>
 
-        <h2>2. Descripción general</h2>
-        <p>ALERTA es una aplicación para dispositivos Android que monitoriza eventos del sistema
-        y reproduce alertas por voz (texto a voz / TTS) cuando detecta cambios relevantes
-        configurados por el usuario, incluyendo de forma no exhaustiva:</p>
-        <ul>
-            <li>Conexión o desconexión de Wi-Fi, datos móviles o Ethernet.</li>
-            <li>Estado del cargador y nivel de batería.</li>
-            <li>Temperatura del dispositivo (núcleos del procesador y/o batería, cuando el
-                sistema lo permite).</li>
-            <li>Uso de memoria RAM y espacio libre de almacenamiento.</li>
-            <li>Consumo de datos móviles (si el usuario activa esta alerta).</li>
-            <li>Alertas programadas personalizadas (hasta 10, con texto y hora definidos por el
-                usuario).</li>
-            <li>Anuncio de la hora en punto (si el usuario lo activa).</li>
-            <li>Detección automática de llamadas telefónicas en curso y actividad de voz de
-                WhatsApp (llamadas VoIP, notas de audio), para pausar temporalmente las alertas
-                de voz y no interrumpir la conversación.</li>
-        </ul>
+      <h2>5. Servicio en primer plano</h2>
+      <p>
+        ALERTA utiliza un <strong>servicio en primer plano</strong> para mantener activo el monitoreo en segundo plano
+        y ofrecer alertas oportunas. El usuario verá una <strong>notificación persistente</strong> mientras el servicio
+        esté activo. Esto es necesario para el funcionamiento principal de la App.
+      </p>
 
-        <h2>3. Datos que utiliza la aplicación</h2>
-        <p>ALERTA está diseñada para funcionar principalmente de forma local en el dispositivo
-        del usuario. La App puede acceder a la siguiente información del dispositivo necesaria
-        para su funcionamiento:</p>
-        <ul>
-            <li>Estado de conectividad (Wi-Fi, datos móviles, Ethernet u otros tipos de red).</li>
-            <li>Estado de carga y nivel de batería.</li>
-            <li>Información térmica del dispositivo (temperatura de núcleos y/o batería).</li>
-            <li>Uso de memoria RAM y espacio libre de almacenamiento interno.</li>
-            <li>Consumo de datos móviles en tiempo real (solo si el usuario activa el
-                monitoreo).</li>
-            <li>Datos del acelerómetro (solo para detectar agitación del dispositivo y pausar
-                temporalmente las alertas de voz, si el usuario activa esta función).</li>
-            <li>Preferencias del usuario: idioma, tipos de alerta, umbrales, voces TTS,
-                sensibilidad de agitación, intervalos de monitoreo, etc.</li>
-            <li><strong>Identificador local del dispositivo (ANDROID_ID, Settings.Secure):</strong>
-                se utiliza únicamente a nivel local en el dispositivo para gestionar el período
-                de prueba gratuito de la aplicación (60 días desde la primera instalación) y
-                asociar el estado de la licencia a la instalación. No se envía a servidores
-                externos ni se combina con otros identificadores.</li>
-            <li><strong>Estado de llamadas del teléfono y actividad de audio del sistema:</strong>
-                se detecta cuándo el usuario está en una llamada telefónica (entrante o saliente
-                por red móvil) o en una llamada / chat de voz de WhatsApp (llamada VoIP,
-                reproducción o grabación de nota de voz), para pausar automáticamente las
-                alertas TTS de voz y no interrumpir la conversación. <strong>No se accede al
-                contenido de las llamadas, ni a los números de teléfono, ni a los mensajes ni
-                audios de WhatsApp.</strong> Solo se utiliza el <em>estado</em> (ocupado /
-                libre).</li>
-        </ul>
-        <p>Esta información se procesa en el dispositivo para generar alertas, notificaciones y
-        mensajes de voz. <strong>ALERTA no vende datos personales ni los utiliza con fines
-        publicitarios.</strong></p>
+      <h2>6. Almacenamiento local y copias de seguridad</h2>
+      <p>
+        Las preferencias del usuario y la configuración de la App se guardan <strong>localmente</strong> en el dispositivo
+        (por ejemplo, mediante almacenamiento interno del sistema / <code>SharedPreferences</code>).
+      </p>
+      <p>
+        En esta versión de prueba <strong>no se gestionan compras, pagos ni suscripciones</strong> dentro de la aplicación.
+      </p>
+      <p>
+        Si el usuario activa <strong>copias de seguridad del sistema</strong> en Android, los datos locales de configuración
+        de la App podrían incluirse en esa copia, según la configuración del dispositivo y del fabricante.
+      </p>
 
-        <h2>4. Permisos del sistema Android</h2>
-        <p>Para ofrecer sus funciones, ALERTA puede solicitar los siguientes permisos del
-        sistema:</p>
-        <ul>
-            <li><strong>Red e Internet (INTERNET):</strong> declarado por compatibilidad del
-                sistema; la App no transmite datos personales a servidores del desarrollador.
-                No existen servidores propios que reciban datos de los usuarios.</li>
-            <li><strong>Estado de red y Wi-Fi
-                (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>):</strong>
-                detectar y avisar cuando cambia la conexión Wi-Fi, Ethernet o datos móviles.</li>
-            <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> detectar
-                cambios de conectividad móvil y detectar cuándo hay una llamada telefónica en
-                curso para pausar las alertas TTS durante la conversación; no se usa para
-                identificar al usuario, ni para realizar llamadas, ni para crear perfiles, ni
-                para acceder a números de teléfono.</li>
-            <li><strong>Servicio en primer plano (<code>FOREGROUND_SERVICE</code>,
-                <code>FOREGROUND_SERVICE_DATA_SYNC</code>,
-                <code>FOREGROUND_SERVICE_SPECIAL_USE</code>):</strong> mantener el monitoreo
-                activo con notificación visible al usuario, incluso cuando la app no está en
-                primer plano. Esto es necesario para el funcionamiento principal de la App.</li>
-            <li><strong>Notificaciones (<code>POST_NOTIFICATIONS</code>, Android 13+):</strong>
-                informar del estado del servicio y mostrar las alertas visuales.</li>
-            <li><strong>Audio y vibración (<code>VIBRATE</code>,
-                <code>MODIFY_AUDIO_SETTINGS</code>):</strong> reproducir alertas por voz, avisos
-                hápticos y ajustar el volumen del canal de audio TTS según la configuración del
-                usuario, sin alterar la configuración global de otros canales (música,
-                llamadas, etc.).</li>
-            <li><strong>Inicio automático (<code>RECEIVE_BOOT_COMPLETED</code>):</strong>
-                reiniciar el servicio tras encender / reiniciar el dispositivo, si el usuario
-                habilitó el auto-inicio en los ajustes de la App.</li>
-            <li><strong>Optimización de batería
-                (<code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>, <code>WAKE_LOCK</code>):</strong>
-                solicitar al usuario excluir la App de restricciones de ahorro de energía cuando
-                sea necesario para mantener el monitoreo en segundo plano; <code>WAKE_LOCK</code>
-                se utiliza únicamente durante unos segundos para asegurar que una alerta de voz
-                TTS se reproduzca completamente sin interrupciones por ahorro energético.</li>
-            <li><strong>Almacenamiento:</strong> solo si fuera necesario por compatibilidad con
-                versiones antiguas de Android o lectura térmica del sistema a través de archivos
-                del sistema (sensores térmicos).</li>
-            <li><strong>Permisos adicionales de compatibilidad:</strong> algunos permisos pueden
-                declararse en el manifiesto de la App por compatibilidad con distintos
-                fabricantes y versiones de Android, sin usarse para rastrear al usuario.</li>
-            <li><strong>Ubicación:</strong> ALERTA no utiliza la ubicación GPS ni permisos de
-                localización para rastrear al usuario ni para crear perfiles de localización.
-                Si algún permiso relacionado con ubicación aparece en el sistema, no se emplea
-                para identificar la posición del usuario.</li>
-        </ul>
+      <h2>7. Texto a voz (TTS)</h2>
+      <p>
+        Las alertas por voz utilizan el <strong>motor de texto a voz (TTS)</strong> instalado en el dispositivo del usuario
+        (servicios del sistema o de Google, según configuración). ALERTA <strong>no envía</strong> el contenido de las
+        alertas a servidores propios del desarrollador; la síntesis de voz se realiza en el dispositivo o mediante
+        el proveedor TTS configurado por el sistema.
+      </p>
 
-        <h2>5. Servicio en primer plano</h2>
-        <p>ALERTA utiliza un servicio en primer plano (Foreground Service) para mantener activo
-        el monitoreo en segundo plano y ofrecer alertas oportunas. El usuario verá una
-        notificación persistente mientras el servicio esté activo. Esto es necesario para el
-        funcionamiento principal de la App y se ajusta a los requisitos de Google Play para
-        servicios de este tipo.</p>
+      <h2>8. Recopilación, uso y finalidad de los datos</h2>
+      <ul>
+        <li>ALERTA <strong>no recopila, vende ni comparte</strong> datos personales de forma remota con fines comerciales o publicitarios.</li>
+        <li>ALERTA <strong>no muestra publicidad</strong> ni utiliza datos para segmentación publicitaria.</li>
+        <li>Toda la configuración y los datos de monitoreo se <strong>procesan y almacenan localmente</strong> en el dispositivo.</li>
+        <li>La finalidad del tratamiento es exclusivamente <strong>prestar el servicio de alertas</strong> solicitado por el usuario.</li>
+      </ul>
 
-        <h2>6. Almacenamiento local y copias de seguridad</h2>
-        <p>Las preferencias del usuario y la configuración de la App se guardan localmente en
-        el dispositivo (por ejemplo, mediante almacenamiento interno del sistema /
-        SharedPreferences). También se almacena localmente el identificador ANDROID_ID y la
-        fecha de primera instalación, únicamente para la gestión interna del período de prueba
-        gratuito (60 días).</p>
-        <p>En esta versión de prueba no se gestionan compras, pagos ni suscripciones dentro de
-        la aplicación.</p>
-        <p>Si el usuario activa copias de seguridad del sistema en Android, los datos locales
-        de configuración de la App podrían incluirse en esa copia, según la configuración del
-        dispositivo y del fabricante.</p>
+      <h2>9. Compartición con terceros</h2>
+      <p>
+        ALERTA <strong>no comparte</strong> datos personales con terceros con fines comerciales o publicitarios.
+        La App puede interactuar únicamente con:
+      </p>
+      <ul>
+        <li><strong>Servicios del sistema Android</strong> (red, batería, sensores, TTS, notificaciones).</li>
+        <li><strong>Google Play</strong> para distribución e instalación de la App desde la tienda (en pruebas cerradas o producción).</li>
+      </ul>
+      <p>No existen servidores propios del desarrollador que reciban datos de los usuarios.</p>
 
-        <h2>7. Texto a voz (TTS)</h2>
-        <p>Las alertas por voz utilizan el motor de texto a voz (TTS) instalado en el
-        dispositivo del usuario (servicios del sistema o de Google, según configuración).
-        ALERTA no envía el contenido de las alertas a servidores propios del desarrollador;
-        la síntesis de voz se realiza en el dispositivo o mediante el proveedor TTS
-        configurado por el sistema.</p>
+      <h2>10. Transferencias internacionales</h2>
+      <p>
+        ALERTA no opera servidores propios para recopilar datos personales. Si el usuario utiliza servicios de
+        Google (Play Store, motor TTS, etc.), dichos servicios pueden estar sujetos a las
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">políticas de privacidad de Google</a>.
+      </p>
 
-        <h2>8. Recopilación, uso y finalidad de los datos</h2>
-        <ul>
-            <li>ALERTA no recopila, vende ni comparte datos personales de forma remota con
-                fines comerciales o publicitarios.</li>
-            <li>ALERTA no muestra publicidad ni utiliza datos para segmentación publicitaria.</li>
-            <li>Toda la configuración y los datos de monitoreo se procesan y almacenan
-                localmente en el dispositivo.</li>
-            <li>La finalidad del tratamiento es exclusivamente prestar el servicio de alertas
-                solicitado por el usuario (monitorización de eventos del sistema y reproducción
-                de avisos por voz / notificaciones).</li>
-        </ul>
+      <h2>11. Seguridad</h2>
+      <p>
+        Se aplican medidas razonables para proteger la información procesada localmente en el dispositivo.
+        Dado que la App <strong>no transmite datos personales a servidores del desarrollador</strong>, el riesgo de
+        exposición remota de datos por parte de ALERTA es limitado.
+      </p>
 
-        <h2>9. Compartición con terceros</h2>
-        <p>ALERTA no comparte datos personales con terceros con fines comerciales o
-        publicitarios. La App puede interactuar únicamente con:</p>
-        <ul>
-            <li>Servicios del sistema Android (red, batería, sensores, TTS, notificaciones,
-                TelephonyManager para estado de llamadas, AudioManager para estado de audio de
-                WhatsApp).</li>
-            <li>Google Play para distribución e instalación de la App desde la tienda (en
-                pruebas cerradas o producción).</li>
-        </ul>
-        <p>No existen servidores propios del desarrollador que reciban datos de los
-        usuarios.</p>
+      <h2>12. Conservación de los datos</h2>
+      <p>
+        La configuración y los datos locales se conservan en el dispositivo hasta que el usuario:
+      </p>
+      <ul>
+        <li>Modifica o desactiva funciones desde la App.</li>
+        <li>Desinstala la App.</li>
+        <li>Borra los datos de la aplicación desde los ajustes del sistema Android.</li>
+      </ul>
 
-        <h2>10. Transferencias internacionales</h2>
-        <p>ALERTA no opera servidores propios para recopilar datos personales. Si el usuario
-        utiliza servicios de Google (Play Store, motor TTS, etc.), dichos servicios pueden
-        estar sujetos a las políticas de privacidad de Google.</p>
+      <h2>13. Derechos del usuario</h2>
+      <p>El usuario puede en cualquier momento:</p>
+      <ul>
+        <li>Desactivar alertas y el servicio desde la configuración de la App.</li>
+        <li>Revocar permisos desde los <strong>Ajustes → Aplicaciones → ALERTA → Permisos</strong> de Android.</li>
+        <li>Desinstalar la App, lo que elimina los datos locales asociados (salvo copias de seguridad del sistema, si las hubiera).</li>
+        <li>Agitar el dispositivo para silenciar alertas temporalmente (~30 segundos), si activó esa función.</li>
+      </ul>
+      <p>
+        Para consultas sobre privacidad, escriba a:
+        <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>.
+        Responderemos en un plazo razonable.
+      </p>
 
-        <h2>11. Seguridad</h2>
-        <p>Se aplican medidas razonables para proteger la información procesada localmente en
-        el dispositivo. Dado que la App no transmite datos personales a servidores del
-        desarrollador, el riesgo de exposición remota de datos por parte de ALERTA es
-        limitado.</p>
+      <h2>14. Menores de edad</h2>
+      <p>
+        La App está dirigida al público general. No recopilamos intencionalmente información personal de menores
+        de edad. Si un padre o tutor tiene dudas, puede contactarnos en el correo indicado.
+      </p>
 
-        <h2>12. Conservación de los datos</h2>
-        <p>La configuración y los datos locales (incluido el ANDROID_ID de prueba y la fecha
-        de primera instalación) se conservan en el dispositivo hasta que el usuario:</p>
-        <ul>
-            <li>Modifica o desactiva funciones desde la App.</li>
-            <li>Revoca permisos desde los Ajustes → Aplicaciones → ALERTA → Permisos de
-                Android.</li>
-            <li>Desinstala la App.</li>
-            <li>Borra los datos de la aplicación desde los ajustes del sistema Android.</li>
-        </ul>
+      <h2>15. Cambios en esta política</h2>
+      <p>
+        Podemos actualizar esta Política de Privacidad cuando sea necesario (por ejemplo, al publicar una versión
+        de producción con compras, o al modificar permisos). La versión vigente estará siempre disponible en
+        esta URL pública. La fecha de <strong>Última actualización</strong> indicará la revisión más reciente.
+      </p>
 
-        <h2>13. Derechos del usuario</h2>
-        <p>El usuario puede en cualquier momento:</p>
-        <ul>
-            <li>Desactivar alertas y el servicio desde la configuración de la App.</li>
-            <li>Revocar permisos desde los Ajustes → Aplicaciones → ALERTA → Permisos de
-                Android.</li>
-            <li>Desinstalar la App, lo que elimina los datos locales asociados (salvo copias
-                de seguridad del sistema, si las hubiera).</li>
-            <li>Agitar el dispositivo para silenciar alertas temporalmente (~30 segundos), si
-                activó esa función.</li>
-        </ul>
-        <p>Para consultas sobre privacidad, escriba a:
-        <a href="mailto:camino.jose2025@gmail.com">camino.jose2025@gmail.com</a>. Responderemos
-        en un plazo razonable.</p>
+      <h2>16. Contacto</h2>
+      <p>
+        Si tiene preguntas sobre esta Política de Privacidad, escríbanos a:<br />
+        <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>
+      </p>
+    </section>
 
-        <h2>14. Menores de edad</h2>
-        <p>La App está dirigida al público general. No recopilamos intencionalmente información
-        personal de menores de edad. Si un padre o tutor tiene dudas, puede contactarnos en
-        el correo indicado.</p>
+    <!-- ==================== ENGLISH ==================== -->
+    <section id="english" class="lang-section">
+      <span class="lang-label">EN</span>
+      <h1>ALERT Privacy Policy</h1>
+      <p class="meta"><strong>Last updated:</strong> October 25, 2024</p>
 
-        <h2>15. Cambios en esta política</h2>
-        <p>Podemos actualizar esta Política de Privacidad cuando sea necesario (por ejemplo,
-        al publicar una versión de producción con compras, o al modificar permisos o
-        funcionalidades). La versión vigente estará siempre disponible en esta URL pública.
-        La fecha de <em>Última actualización</em> indicará la revisión más reciente.</p>
+      <p>
+        This Privacy Policy describes how the <strong>ALERT</strong> application
+        (package: <code>com.wolfrang1996.alerta</code>; in Spanish it may appear as <strong>ALERTA</strong>)
+        collects, uses, stores, and protects information when you use our services.
+      </p>
 
-        <h2>16. Contacto</h2>
-        <p>Si tiene preguntas sobre esta Política de Privacidad, escríbanos a:</p>
-        <p><strong><a href="mailto:camino.jose2025@gmail.com">camino.jose2025@gmail.com</a></strong></p>
+      <div class="note">
+        <strong>Note about this version:</strong> this is a <strong>tester build for internal testing</strong>.
+        All features are unlocked. <strong>It does not include in-app purchases or payment processing.</strong>
+        Google Play Billing is not used.
+      </div>
 
-        <footer>
-            © 2026 ALERTA · Desarrollado por Wolfrang1996 · Versión de prueba (testers)
-        </footer>
+      <h2>1. Data controller</h2>
+      <ul>
+        <li><strong>Application:</strong> ALERT / ALERTA</li>
+        <li><strong>Developer:</strong> Wolfrang1996</li>
+        <li><strong>Contact email:</strong> <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a></li>
+      </ul>
 
-    </div>
-    <!-- ============ FIN CONTENIDO ESPAÑOL ============ -->
+      <h2>2. Overview</h2>
+      <p>
+        ALERT is an Android application that monitors system events and plays
+        <strong>voice alerts</strong> (text-to-speech / TTS) when it detects relevant changes configured
+        by the user, including but not limited to:
+      </p>
+      <ul>
+        <li>Wi-Fi, mobile data, or Ethernet connection and disconnection.</li>
+        <li>Charger status and battery level.</li>
+        <li>Device temperature (CPU cores and/or battery, when the system allows).</li>
+        <li>RAM usage and free internal storage space.</li>
+        <li>Mobile data consumption (if the user enables this alert).</li>
+        <li>Custom scheduled alerts (up to 10, with user-defined text and time).</li>
+        <li>Hourly chime announcement (if enabled by the user).</li>
+      </ul>
 
-    <!-- ================================================================== -->
-    <!-- ======================== CONTENIDO INGLÉS ======================== -->
-    <!-- ================================================================== -->
-    <div data-lang="en">
+      <h2>3. Data used by the application</h2>
+      <p>
+        ALERT is designed to run <strong>primarily locally</strong> on the user's device.
+        The App may access device information required for its operation:
+      </p>
+      <ul>
+        <li>Connectivity status (Wi-Fi, mobile data, Ethernet, or other network types).</li>
+        <li>Charging status and battery level.</li>
+        <li>Device thermal information (core and/or battery temperature).</li>
+        <li>RAM usage and free internal storage space.</li>
+        <li>Real-time mobile data consumption (only if data monitoring is enabled).</li>
+        <li>Accelerometer data (only to detect shaking and temporarily pause voice alerts, if enabled).</li>
+        <li>User preferences: language, alert types, thresholds, TTS voices, shake sensitivity, monitoring intervals, etc.</li>
+      </ul>
+      <p>
+        This information is <strong>processed on the device</strong> to generate alerts, notifications, and voice messages.
+        ALERT <strong>does not sell</strong> personal data or use it for advertising purposes.
+      </p>
 
-        <h1>ALERTA Privacy Policy</h1>
+      <h2>4. Android system permissions</h2>
+      <p>To provide its features, ALERT may request system permissions, such as:</p>
+      <ul>
+        <li><strong>Network and Internet:</strong> detect connectivity changes and device compatibility. The App does not transmit personal data to developer servers.</li>
+        <li><strong>Wi-Fi and network state:</strong> notify when the connection changes.</li>
+        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; it is not used to identify the user, make calls, or create profiles.</li>
+        <li><strong>Foreground service:</strong> keep monitoring active with a visible notification to the user.</li>
+        <li><strong>Notifications:</strong> report service status and alerts (Android 13+).</li>
+        <li><strong>Audio and vibration:</strong> play voice alerts and haptic feedback.</li>
+        <li><strong>Automatic startup:</strong> restart the service after device boot, if enabled by the user.</li>
+        <li><strong>Battery optimization:</strong> request the user to exclude the App from restrictions, if necessary for background monitoring.</li>
+      </ul>
+      <p>
+        <strong>Location:</strong> ALERT <strong>does not request or use location permissions</strong> or GPS
+        to track the user.
+      </p>
 
-        <p class="updated">Last updated:
-            <span class="placeholder">[CHANGE TO THE DAY YOU UPLOAD TO PLAY CONSOLE]</span>
-        </p>
+      <h2>5. Foreground service</h2>
+      <p>
+        ALERT uses a <strong>foreground service</strong> to maintain background monitoring active
+        and provide timely alerts. The user will see a <strong>persistent notification</strong> while the service
+        is running. This is required for the core functionality of the App.
+      </p>
 
-        <p>This Privacy Policy describes how the <strong>ALERTA</strong> application
-        (package: <code>com.wolfrang1996.alerta</code>; it may also appear as
-        <strong>ALERT</strong>) collects, uses, stores and protects information when you use
-        our services.</p>
+      <h2>6. Local storage and backups</h2>
+      <p>
+        User preferences and App configurations are saved <strong>locally</strong> on the device
+        (e.g., via system internal storage / <code>SharedPreferences</code>).
+      </p>
+      <p>
+        In this test version, <strong>no in-app purchases, payments, or subscriptions</strong> are handled.
+      </p>
+      <p>
+        If the user enables <strong>system backups</strong> on Android, local App configuration data might be included
+        in that backup, depending on device and manufacturer settings.
+      </p>
 
-        <div class="note">
-            <p><strong>Note about this version:</strong> this is a test version for testers.
-            All features are unlocked. It does not include in-app purchases or payment
-            processing. Google Play Billing is not used.</p>
-        </div>
+      <h2>7. Text-to-speech (TTS)</h2>
+      <p>
+        Voice alerts use the <strong>text-to-speech (TTS) engine</strong> installed on the user's device
+        (system or Google services, depending on configuration). ALERT <strong>does not send</strong> alert content
+        to the developer's own servers; speech synthesis is performed on the device or by the system-configured TTS provider.
+      </p>
 
-        <h2>1. Data Controller</h2>
-        <ul>
-            <li><strong>Application:</strong> ALERTA / ALERT</li>
-            <li><strong>Developer:</strong> Wolfrang1996</li>
-            <li><strong>Contact email:</strong>
-                <a href="mailto:camino.jose2025@gmail.com">camino.jose2025@gmail.com</a>
-            </li>
-        </ul>
+      <h2>8. Data collection, use, and purpose</h2>
+      <ul>
+        <li>ALERT <strong>does not collect, sell, or share</strong> personal data remotely for commercial or advertising purposes.</li>
+        <li>ALERT <strong>does not display ads</strong> or use data for ad targeting.</li>
+        <li>All configuration and monitoring data is <strong>processed and stored locally</strong> on the device.</li>
+        <li>The purpose of data processing is exclusively to <strong>provide the alert service</strong> requested by the user.</li>
+      </ul>
 
-        <h2>2. General Description</h2>
-        <p>ALERTA is an Android application that monitors system events and plays voice alerts
-        (text-to-speech / TTS) when it detects relevant changes configured by the user,
-        including but not limited to:</p>
-        <ul>
-            <li>Wi-Fi, mobile data or Ethernet connection / disconnection.</li>
-            <li>Charger status and battery level.</li>
-            <li>Device temperature (CPU cores and/or battery, when the system allows it).</li>
-            <li>RAM usage and free internal storage space.</li>
-            <li>Mobile data consumption (if the user enables this alert).</li>
-            <li>Up to 10 custom scheduled alerts (with user-defined text and time).</li>
-            <li>Hourly time announcement (if the user enables it).</li>
-            <li>Automatic detection of ongoing phone calls and WhatsApp voice activity
-                (VoIP calls, voice notes), to temporarily pause voice alerts so the
-                conversation is not interrupted.</li>
-        </ul>
+      <h2>9. Third-party sharing</h2>
+      <p>
+        ALERT <strong>does not share</strong> personal data with third parties for commercial or advertising purposes.
+        The App may interact only with:
+      </p>
+      <ul>
+        <li><strong>Android system services</strong> (network, battery, sensors, TTS, notifications).</li>
+        <li><strong>Google Play</strong> for App distribution and installation from the store (in closed testing or production).</li>
+      </ul>
+      <p>There are no developer-owned servers receiving user data.</p>
 
-        <h2>3. Data the Application Uses</h2>
-        <p>ALERTA is designed to run primarily locally on the user's device. The App may
-        access the following device information as required for its operation:</p>
-        <ul>
-            <li>Connectivity status (Wi-Fi, mobile data, Ethernet or other network types).</li>
-            <li>Charging state and battery level.</li>
-            <li>Device thermal information (core and/or battery temperature).</li>
-            <li>RAM usage and free internal storage space.</li>
-            <li>Real-time mobile data usage (only if the user activates monitoring).</li>
-            <li>Accelerometer data (only to detect device shake and temporarily pause voice
-                alerts, if the user enables this feature).</li>
-            <li>User preferences: language, alert types, thresholds, TTS voices, shake
-                sensitivity, monitoring intervals, etc.</li>
-            <li><strong>Local device identifier (ANDROID_ID, Settings.Secure):</strong> used
-                exclusively at the local device level to manage the application's free trial
-                period (60 days from first install) and associate the license status with that
-                installation. It is not sent to external servers and is not combined with any
-                other identifiers.</li>
-            <li><strong>Phone call state and system audio activity:</strong> used to detect
-                when the user is on a mobile phone call (incoming or outgoing) or on a
-                WhatsApp voice chat / VoIP call, or when a voice note is playing/recording, so
-                that voice TTS alerts are automatically paused and do not interrupt the
-                conversation. <strong>The content of calls, phone numbers, WhatsApp messages
-                or audio files is never accessed.</strong> Only the <em>state</em> (busy /
-                free) is used.</li>
-        </ul>
-        <p>This information is processed locally on the device to generate alerts,
-        notifications and voice messages. <strong>ALERTA does not sell personal data or use it
-        for advertising purposes.</strong></p>
+      <h2>10. International transfers</h2>
+      <p>
+        ALERT does not operate its own servers to collect personal data. If the user utilizes Google services
+        (Play Store, TTS engine, etc.), those services may be subject to
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policies</a>.
+      </p>
 
-        <h2>4. Android System Permissions</h2>
-        <p>To deliver its features, ALERTA may request the following system permissions:</p>
-        <ul>
-            <li><strong>Network &amp; Internet (INTERNET):</strong> declared for system
-                compatibility purposes; the App does not transmit personal data to the
-                developer's servers. No proprietary servers receive user data.</li>
-            <li><strong>Network &amp; Wi-Fi status
-                (<code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code>):</strong>
-                detect and notify when Wi-Fi, Ethernet or mobile data connectivity changes.</li>
-            <li><strong>Phone status (<code>READ_PHONE_STATE</code>):</strong> detect mobile
-                data connectivity changes and detect when a phone call is in progress in order
-                to pause TTS voice alerts during the conversation; it is not used to identify
-                the user, to make calls, to build profiles, or to access phone numbers.</li>
-            <li><strong>Foreground service (<code>FOREGROUND_SERVICE</code>,
-                <code>FOREGROUND_SERVICE_DATA_SYNC</code>,
-                <code>FOREGROUND_SERVICE_SPECIAL_USE</code>):</strong> keep monitoring active
-                with a visible user notification, even when the app is not in the foreground.
-                This is required for the App's core functionality.</li>
-            <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>, Android 13+):</strong>
-                report service status and display visual alerts.</li>
-            <li><strong>Audio &amp; vibration (<code>VIBRATE</code>,
-                <code>MODIFY_AUDIO_SETTINGS</code>):</strong> play voice alerts, provide
-                haptic feedback and adjust the TTS audio stream volume according to user
-                settings, without altering the global configuration of other streams (music,
-                calls, etc.).</li>
-            <li><strong>Auto-start on boot (<code>RECEIVE_BOOT_COMPLETED</code>):</strong>
-                restart the monitoring service after the device is powered on / rebooted, if
-                the user enabled auto-start in the App settings.</li>
-            <li><strong>Battery optimization
-                (<code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>, <code>WAKE_LOCK</code>):</strong>
-                ask the user to exclude the App from power-saving restrictions when necessary
-                to keep background monitoring reliable; <code>WAKE_LOCK</code> is only held
-                for a few seconds to ensure that a TTS voice alert plays fully without being
-                cut off by aggressive power saving.</li>
-            <li><strong>Storage:</strong> only if required for compatibility with older
-                Android versions or for reading system thermal sensor files.</li>
-            <li><strong>Additional compatibility permissions:</strong> a few extra permissions
-                may be declared in the App manifest for compatibility with different device
-                manufacturers and Android versions, and are not used for user tracking.</li>
-            <li><strong>Location:</strong> ALERTA does not use GPS or location permissions to
-                track the user or to build location profiles. Should any location-related
-                permission appear at the system level, it is not used to determine the user's
-                physical position.</li>
-        </ul>
+      <h2>11. Security</h2>
+      <p>
+        Reasonable measures are applied to protect information processed locally on the device.
+        Since the App <strong>does not transmit personal data to developer servers</strong>, the risk of
+        remote data exposure by ALERT is limited.
+      </p>
 
-        <h2>5. Foreground Service</h2>
-        <p>ALERTA uses a Foreground Service to keep background monitoring active and deliver
-        timely alerts. The user will see a persistent notification while the service is
-        running. This is required for the App's core functionality and complies with Google
-        Play requirements for this type of service.</p>
+      <h2>12. Data retention</h2>
+      <p>
+        Settings and local data remain on the device until the user:
+      </p>
+      <ul>
+        <li>Modifies or disables features from the App.</li>
+        <li>Uninstalls the App.</li>
+        <li>Clears App data from Android system settings.</li>
+      </ul>
 
-        <h2>6. Local Storage &amp; Backups</h2>
-        <p>User preferences and App configuration are saved locally on the device (e.g. via
-        the system's internal storage / SharedPreferences). The ANDROID_ID identifier and the
-        first-install date are also stored locally, solely for the internal management of the
-        free 60-day trial period.</p>
-        <p>In this test version, no in-app purchases, payments or subscriptions are managed
-        inside the application.</p>
-        <p>If the user enables Android system backups, local App configuration data may be
-        included in that backup depending on the device and manufacturer settings.</p>
+      <h2>13. User rights</h2>
+      <p>The user may at any time:</p>
+      <ul>
+        <li>Disable alerts and the service from the App settings.</li>
+        <li>Revoke permissions from <strong>Settings → Apps → ALERT → Permissions</strong> on Android.</li>
+        <li>Uninstall the App, which removes associated local data (except system backups, if any).</li>
+        <li>Shake the device to temporarily silence alerts (~30 seconds), if that feature is enabled.</li>
+      </ul>
+      <p>
+        For privacy inquiries, email:
+        <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>.
+        We will respond within a reasonable timeframe.
+      </p>
 
-        <h2>7. Text-to-Speech (TTS)</h2>
-        <p>Voice alerts use the text-to-speech (TTS) engine installed on the user's device
-        (system services or Google services, depending on configuration). ALERTA does not
-        send alert content to the developer's own servers; voice synthesis is performed
-        locally on the device or by the TTS provider configured by the system.</p>
+      <h2>14. Children</h2>
+      <p>
+        The App is intended for the general public. We do not intentionally collect personal information from children.
+        If a parent or guardian has concerns, they may contact us at the email above.
+      </p>
 
-        <h2>8. Data Collection, Use and Purpose</h2>
-        <ul>
-            <li>ALERTA does not remotely collect, sell or share personal data for commercial
-                or advertising purposes.</li>
-            <li>ALERTA does not display ads or use data for ad targeting.</li>
-            <li>All configuration and monitoring data is processed and stored locally on the
-                device.</li>
-            <li>The sole purpose of data processing is to provide the alert service requested
-                by the user (monitoring system events and playing voice / visual
-                notifications).</li>
-        </ul>
+      <h2>15. Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy when necessary (for example, when publishing a production version
+        with purchases, or when modifying permissions). The current version will always be available at
+        this public URL. The <strong>Last updated</strong> date will indicate the most recent revision.
+      </p>
 
-        <h2>9. Sharing with Third Parties</h2>
-        <p>ALERTA does not share personal data with third parties for commercial or
-        advertising purposes. The App may only interact with:</p>
-        <ul>
-            <li>Android system services (network, battery, sensors, TTS, notifications,
-                TelephonyManager for call state, AudioManager for WhatsApp audio state).</li>
-            <li>Google Play for distribution and installation of the App from the store
-                (closed testing or production).</li>
-        </ul>
-        <p>No proprietary servers operated by the developer receive user data.</p>
+      <h2>16. Contact</h2>
+      <p>
+        If you have questions about this Privacy Policy, contact us at:<br />
+        <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>
+      </p>
+    </section>
 
-        <h2>10. International Transfers</h2>
-        <p>ALERTA does not operate its own servers to collect personal data. If the user uses
-        Google services (Play Store, TTS engine, etc.), those services may be subject to
-        Google's own privacy policies.</p>
-
-        <h2>11. Security</h2>
-        <p>Reasonable measures are applied to protect information processed locally on the
-        device. Since the App does not transmit personal data to the developer's servers, the
-        risk of remote data exposure through ALERTA is limited.</p>
-
-        <h2>12. Data Retention</h2>
-        <p>Configuration and local data (including the trial ANDROID_ID and the first-install
-        date) are kept on the device until the user:</p>
-        <ul>
-            <li>Modifies or disables features from within the App.</li>
-            <li>Revokes permissions via Settings → Apps → ALERTA → Permissions on Android.</li>
-            <li>Uninstalls the App.</li>
-            <li>Clears app data from the Android system settings.</li>
-        </ul>
-
-        <h2>13. User Rights</h2>
-        <p>At any time, the user may:</p>
-        <ul>
-            <li>Disable alerts and the service from the App settings.</li>
-            <li>Revoke permissions via Settings → Apps → ALERTA → Permissions on Android.</li>
-            <li>Uninstall the App, which deletes associated local data (except for system
-                backups, if any exist).</li>
-            <li>Shake the device to temporarily silence alerts (~30 seconds), if the feature
-                is enabled.</li>
-        </ul>
-        <p>For privacy inquiries, please email:
-        <a href="mailto:camino.jose2025@gmail.com">camino.jose2025@gmail.com</a>. We will
-        respond within a reasonable timeframe.</p>
-
-        <h2>14. Children / Minors</h2>
-        <p>The App is intended for a general audience. We do not knowingly collect personal
-        information from minors. If a parent or guardian has concerns, please contact us at
-        the email address above.</p>
-
-        <h2>15. Changes to this Policy</h2>
-        <p>We may update this Privacy Policy when necessary (e.g. when releasing a production
-        version with purchases, or when changing permissions or features). The current
-        version will always be available at this public URL. The <em>Last updated</em> date
-        will indicate the most recent revision.</p>
-
-        <h2>16. Contact</h2>
-        <p>If you have questions about this Privacy Policy, please write to us at:</p>
-        <p><strong><a href="mailto:camino.jose2025@gmail.com">camino.jose2025@gmail.com</a></strong></p>
-
-        <footer>
-            © 2026 ALERTA · Developed by Wolfrang1996 · Test version (testers)
-        </footer>
-
-    </div>
-    <!-- ============ FIN CONTENIDO INGLÉS ============ -->
-
-</div>
-
-<script>
-    function setLang(lang) {
-        document.documentElement.setAttribute('data-active-lang', lang);
-        document.documentElement.setAttribute('lang', lang);
-
-        const btnEs = document.getElementById('btn-es');
-        const btnEn = document.getElementById('btn-en');
-        if (lang === 'es') {
-            btnEs.classList.add('active');
-            btnEn.classList.remove('active');
-            document.title = 'Política de Privacidad de ALERTA';
-        } else {
-            btnEn.classList.add('active');
-            btnEs.classList.remove('active');
-            document.title = 'ALERTA Privacy Policy';
-        }
-
-        try { localStorage.setItem('alerta_privacy_lang', lang); } catch (e) {}
-        window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
-    }
-
-    /* Cargar idioma guardado o preferencia del navegador */
-    (function initLang() {
-        let saved = null;
-        try { saved = localStorage.getItem('alerta_privacy_lang'); } catch (e) {}
-        let lang = saved ||
-                   (navigator.language || navigator.userLanguage || 'en')
-                       .toLowerCase().startsWith('es') ? 'es' : 'en';
-        setLang(lang);
-    })();
-</script>
-
+  </main>
 </body>
 </html>
