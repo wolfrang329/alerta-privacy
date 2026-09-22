@@ -1,3 +1,29 @@
+Agent:  
+Call: replace_file_content(replacementChunk={startLine=75.0, allowMultiple=false, targetContent=        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> detectar cambios de conectividad móvil; no se usa para identificar al usuario, realizar llamadas ni crear perfiles.</li>, replacementContent=        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> se utiliza única y exclusivamente para detectar llamadas telefónicas entrantes o en curso, permitiendo pausar automáticamente las alertas de voz para no interrumpir ni molestar al usuario durante sus conversaciones. No se usa para identificar al usuario, acceder al historial de llamadas ni crear perfiles.</li>}, absolutePath=F:/ALERTA_espaniol_ingles_tester12/ALERTA_espaniol_ingles_tester12/privacy-policy.html)
+Response:
+  File was written
+Agent:  
+Call: replace_file_content(replacementChunk={replacementContent=        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> used solely and exclusively to detect incoming or ongoing phone calls, allowing the app to automatically pause voice alerts so as not to interrupt or disturb the user during conversations. It is not used to identify the user, access call logs, or create profiles.</li>, startLine=250.0, allowMultiple=false, targetContent=        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; it is not used to identify the user, make calls, or create profiles.</li>}, absolutePath=F:/ALERTA_espaniol_ingles_tester12/ALERTA_espaniol_ingles_tester12/privacy-policy.html)
+Response:
+  All replacements failed:
+  --- Failure in replacement block 1 (out of 1 failures):
+  You provided:
+  ```        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; it is not used to identify the user, make calls, or create profiles.</li>```
+  Search Scope: Lines 1 - 400 (Global fallback used)
+  Result: The exact `targetContent` was not found. However, a near-match was found between lines [280 - 280].
+  Did you mean to replace this text?
+  ```        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; not used to identify the user, make calls, or build profiles.</li>```
+  Your next action: If yes, specify the above EXACT text as `targetContent` next attempt. If not, please read the file again to find the correct `targetContent`.
+Agent:  
+Call: replace_file_content(absolutePath=F:/ALERTA_espaniol_ingles_tester12/ALERTA_espaniol_ingles_tester12/privacy-policy.html, replacementChunk={replacementContent=        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> used solely and exclusively to detect incoming or ongoing phone calls, allowing the app to automatically pause voice alerts so as not to interrupt or disturb the user during conversations. It is not used to identify the user, access call logs, or create profiles.</li>, allowMultiple=false, targetContent=        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; not used to identify the user, make calls, or build profiles.</li>, startLine=275.0})
+Response:
+  File was written
+Agent:  
+He corregido la descripción del permiso `READ_PHONE_STATE` en la política de privacidad (en español e inglés) para que sea 100% sincera con lo que hace el código: **pausar las voces durante las llamadas**. Esto blindará tu aplicación contra posibles rechazos por "uso injustificado".
+
+Aquí tienes el código completo de la política de privacidad para que lo actualices en GitHub:
+
+```html
 <!doctype html>
 <html lang="es">
 <head>
@@ -95,7 +121,7 @@
       <ul>
         <li><strong>Red e Internet:</strong> detectar cambios de conectividad y compatibilidad del dispositivo. La App no transmite datos personales a servidores del desarrollador.</li>
         <li><strong>Wi-Fi y estado de red:</strong> avisar cuando cambia la conexión.</li>
-        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> detectar cambios de conectividad móvil; no se usa para identificar al usuario, realizar llamadas ni crear perfiles.</li>
+        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> se utiliza única y exclusivamente para detectar llamadas telefónicas entrantes o en curso, permitiendo pausar automáticamente las alertas de voz para no interrumpir ni molestar al usuario durante sus conversaciones. No se usa para identificar al usuario, acceder al historial de llamadas ni crear perfiles.</li>
         <li><strong>Servicio en primer plano:</strong> mantener el monitoreo activo con notificación visible al usuario.</li>
         <li><strong>Notificaciones:</strong> informar del estado del servicio y alertas (Android 13+).</li>
         <li><strong>Audio y vibración:</strong> reproducir alertas por voz y avisos hápticos.</li>
@@ -200,7 +226,7 @@
 
       <h2>15. Cambios en esta política</h2>
       <p>
-        Puedemos actualizar esta Política de Privacidad cuando sea necesario (por ejemplo, al publicar una versión
+        Podemos actualizar esta Política de Privacidad cuando sea necesario (por ejemplo, al publicar una versión
         de producción con compras, o al modificar permisos). La versión vigente estará siempre disponible en
         esta URL pública. La fecha de <strong>Última actualización</strong> indicará la revisión más reciente.
       </p>
@@ -277,7 +303,7 @@
       <ul>
         <li><strong>Network and Internet:</strong> detect connectivity changes and device compatibility. The App does not transmit personal data to developer servers.</li>
         <li><strong>Wi-Fi and network state:</strong> notify when the connection changes.</li>
-        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; it is not used to identify the user, make calls, or create profiles.</li>
+        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> used solely and exclusively to detect incoming or ongoing phone calls, allowing the app to automatically pause voice alerts so as not to interrupt or disturb the user during conversations. It is not used to identify the user, access call logs, or create profiles.</li>
         <li><strong>Foreground service:</strong> keep monitoring active with a visible notification to the user.</li>
         <li><strong>Notifications:</strong> report service status and alerts (Android 13+).</li>
         <li><strong>Audio and vibration:</strong> play voice alerts and haptic feedback.</li>
@@ -396,3 +422,4 @@
   </main>
 </body>
 </html>
+```
