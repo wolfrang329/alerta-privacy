@@ -1,29 +1,3 @@
-Agent:  
-Call: replace_file_content(replacementChunk={startLine=75.0, allowMultiple=false, targetContent=        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> detectar cambios de conectividad móvil; no se usa para identificar al usuario, realizar llamadas ni crear perfiles.</li>, replacementContent=        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> se utiliza única y exclusivamente para detectar llamadas telefónicas entrantes o en curso, permitiendo pausar automáticamente las alertas de voz para no interrumpir ni molestar al usuario durante sus conversaciones. No se usa para identificar al usuario, acceder al historial de llamadas ni crear perfiles.</li>}, absolutePath=F:/ALERTA_espaniol_ingles_tester12/ALERTA_espaniol_ingles_tester12/privacy-policy.html)
-Response:
-  File was written
-Agent:  
-Call: replace_file_content(replacementChunk={replacementContent=        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> used solely and exclusively to detect incoming or ongoing phone calls, allowing the app to automatically pause voice alerts so as not to interrupt or disturb the user during conversations. It is not used to identify the user, access call logs, or create profiles.</li>, startLine=250.0, allowMultiple=false, targetContent=        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; it is not used to identify the user, make calls, or create profiles.</li>}, absolutePath=F:/ALERTA_espaniol_ingles_tester12/ALERTA_espaniol_ingles_tester12/privacy-policy.html)
-Response:
-  All replacements failed:
-  --- Failure in replacement block 1 (out of 1 failures):
-  You provided:
-  ```        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; it is not used to identify the user, make calls, or create profiles.</li>```
-  Search Scope: Lines 1 - 400 (Global fallback used)
-  Result: The exact `targetContent` was not found. However, a near-match was found between lines [280 - 280].
-  Did you mean to replace this text?
-  ```        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; not used to identify the user, make calls, or build profiles.</li>```
-  Your next action: If yes, specify the above EXACT text as `targetContent` next attempt. If not, please read the file again to find the correct `targetContent`.
-Agent:  
-Call: replace_file_content(absolutePath=F:/ALERTA_espaniol_ingles_tester12/ALERTA_espaniol_ingles_tester12/privacy-policy.html, replacementChunk={replacementContent=        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> used solely and exclusively to detect incoming or ongoing phone calls, allowing the app to automatically pause voice alerts so as not to interrupt or disturb the user during conversations. It is not used to identify the user, access call logs, or create profiles.</li>, allowMultiple=false, targetContent=        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; not used to identify the user, make calls, or build profiles.</li>, startLine=275.0})
-Response:
-  File was written
-Agent:  
-He corregido la descripción del permiso `READ_PHONE_STATE` en la política de privacidad (en español e inglés) para que sea 100% sincera con lo que hace el código: **pausar las voces durante las llamadas**. Esto blindará tu aplicación contra posibles rechazos por "uso injustificado".
-
-Aquí tienes el código completo de la política de privacidad para que lo actualices en GitHub:
-
-```html
 <!doctype html>
 <html lang="es">
 <head>
@@ -60,7 +34,7 @@ Aquí tienes el código completo de la política de privacidad para que lo actua
     <section id="espanol" class="lang-section" style="margin-top:0;padding-top:0;border-top:none;">
       <span class="lang-label">ES</span>
       <h1>Política de Privacidad de ALERTA</h1>
-      <p class="meta"><strong>Última actualización:</strong> 25 de Octubre de 2024</p>
+      <p class="meta"><strong>Última actualización:</strong> [CAMBIAR EL DÍA QUE SUBAS A PLAY CONSOLE]</p>
 
       <p>
         Esta Política de Privacidad describe cómo la aplicación <strong>ALERTA</strong>
@@ -209,7 +183,7 @@ Aquí tienes el código completo de la política de privacidad para que lo actua
       <ul>
         <li>Desactivar alertas y el servicio desde la configuración de la App.</li>
         <li>Revocar permisos desde los <strong>Ajustes → Aplicaciones → ALERTA → Permisos</strong> de Android.</li>
-        <li>Desinstalar la App, lo que elimina los datos locales asociados (salvo copias de seguridad del sistema, si las hubiera).</li>
+        <li>Desinstala la App, lo que elimina los datos locales asociados (salvo copias de seguridad del sistema, si las hubiera).</li>
         <li>Agitar el dispositivo para silenciar alertas temporalmente (~30 segundos), si activó esa función.</li>
       </ul>
       <p>
@@ -242,7 +216,7 @@ Aquí tienes el código completo de la política de privacidad para que lo actua
     <section id="english" class="lang-section">
       <span class="lang-label">EN</span>
       <h1>ALERT Privacy Policy</h1>
-      <p class="meta"><strong>Last updated:</strong> October 25, 2024</p>
+      <p class="meta"><strong>Last updated:</strong> [CHANGE ON THE DAY YOU SUBMIT TO PLAY CONSOLE]</p>
 
       <p>
         This Privacy Policy describes how the <strong>ALERT</strong> application
@@ -275,22 +249,22 @@ Aquí tienes el código completo de la política de privacidad para que lo actua
         <li>Device temperature (CPU cores and/or battery, when the system allows).</li>
         <li>RAM usage and free internal storage space.</li>
         <li>Mobile data consumption (if the user enables this alert).</li>
-        <li>Custom scheduled alerts (up to 10, with user-defined text and time).</li>
-        <li>Hourly chime announcement (if enabled by the user).</li>
+        <li>Up to 10 custom scheduled alerts (with user-defined text and time).</li>
+        <li>Hour announcements on the hour (if the user enables this feature).</li>
       </ul>
 
       <h2>3. Data used by the application</h2>
       <p>
-        ALERT is designed to run <strong>primarily locally</strong> on the user's device.
-        The App may access device information required for its operation:
+        ALERT is designed to work <strong>primarily locally</strong> on the user's device.
+        The App may access device information necessary for its operation:
       </p>
       <ul>
         <li>Connectivity status (Wi-Fi, mobile data, Ethernet, or other network types).</li>
         <li>Charging status and battery level.</li>
         <li>Device thermal information (core and/or battery temperature).</li>
-        <li>RAM usage and free internal storage space.</li>
-        <li>Real-time mobile data consumption (only if data monitoring is enabled).</li>
-        <li>Accelerometer data (only to detect shaking and temporarily pause voice alerts, if enabled).</li>
+        <li>RAM usage and free internal storage.</li>
+        <li>Real-time mobile data consumption (only if the user enables monitoring).</li>
+        <li>Accelerometer data (only to detect device shake and temporarily pause voice alerts, if the user enables this feature).</li>
         <li>User preferences: language, alert types, thresholds, TTS voices, shake sensitivity, monitoring intervals, etc.</li>
       </ul>
       <p>
@@ -299,16 +273,16 @@ Aquí tienes el código completo de la política de privacidad para que lo actua
       </p>
 
       <h2>4. Android system permissions</h2>
-      <p>To provide its features, ALERT may request system permissions, such as:</p>
+      <p>To provide its features, ALERT may request system permissions such as:</p>
       <ul>
-        <li><strong>Network and Internet:</strong> detect connectivity changes and device compatibility. The App does not transmit personal data to developer servers.</li>
+        <li><strong>Network and Internet:</strong> detect connectivity changes and device compatibility. The App does not transmit personal data to the developer's servers.</li>
         <li><strong>Wi-Fi and network state:</strong> notify when the connection changes.</li>
         <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> used solely and exclusively to detect incoming or ongoing phone calls, allowing the app to automatically pause voice alerts so as not to interrupt or disturb the user during conversations. It is not used to identify the user, access call logs, or create profiles.</li>
-        <li><strong>Foreground service:</strong> keep monitoring active with a visible notification to the user.</li>
-        <li><strong>Notifications:</strong> report service status and alerts (Android 13+).</li>
+        <li><strong>Foreground service:</strong> keep monitoring active with a visible notification.</li>
+        <li><strong>Notifications:</strong> inform about service status and alerts (Android 13+).</li>
         <li><strong>Audio and vibration:</strong> play voice alerts and haptic feedback.</li>
-        <li><strong>Automatic startup:</strong> restart the service after device boot, if enabled by the user.</li>
-        <li><strong>Battery optimization:</strong> request the user to exclude the App from restrictions, if necessary for background monitoring.</li>
+        <li><strong>Auto-start:</strong> restart the service after device reboot, if the user enables it.</li>
+        <li><strong>Battery optimization:</strong> ask the user to exclude the App from restrictions, if needed for background monitoring.</li>
       </ul>
       <p>
         <strong>Location:</strong> ALERT <strong>does not request or use location permissions</strong> or GPS
@@ -317,61 +291,62 @@ Aquí tienes el código completo de la política de privacidad para que lo actua
 
       <h2>5. Foreground service</h2>
       <p>
-        ALERT uses a <strong>foreground service</strong> to maintain background monitoring active
-        and provide timely alerts. The user will see a <strong>persistent notification</strong> while the service
-        is running. This is required for the core functionality of the App.
+        ALERT uses a <strong>foreground service</strong> to keep background monitoring active
+        and deliver timely alerts. The user will see a <strong>persistent notification</strong> while the service
+        is running. This is required for the App's core functionality.
       </p>
 
       <h2>6. Local storage and backups</h2>
       <p>
-        User preferences and App configurations are saved <strong>locally</strong> on the device
-        (e.g., via system internal storage / <code>SharedPreferences</code>).
+        User preferences and App settings are stored <strong>locally</strong> on the device
+        (for example, via system internal storage / <code>SharedPreferences</code>).
       </p>
       <p>
-        In this test version, <strong>no in-app purchases, payments, or subscriptions</strong> are handled.
+        In this tester version, <strong>no purchases, payments, or subscriptions</strong> are managed within the application.
       </p>
       <p>
-        If the user enables <strong>system backups</strong> on Android, local App configuration data might be included
-        in that backup, depending on device and manufacturer settings.
+        If the user enables <strong>system backups</strong> on Android, local App configuration data
+        may be included in that backup, depending on device and manufacturer settings.
       </p>
 
       <h2>7. Text-to-speech (TTS)</h2>
       <p>
         Voice alerts use the <strong>text-to-speech (TTS) engine</strong> installed on the user's device
         (system or Google services, depending on configuration). ALERT <strong>does not send</strong> alert content
-        to the developer's own servers; speech synthesis is performed on the device or by the system-configured TTS provider.
+        to the developer's own servers; speech synthesis is performed on the device or through
+        the TTS provider configured by the system.
       </p>
 
       <h2>8. Data collection, use, and purpose</h2>
       <ul>
         <li>ALERT <strong>does not collect, sell, or share</strong> personal data remotely for commercial or advertising purposes.</li>
-        <li>ALERT <strong>does not display ads</strong> or use data for ad targeting.</li>
-        <li>All configuration and monitoring data is <strong>processed and stored locally</strong> on the device.</li>
-        <li>The purpose of data processing is exclusively to <strong>provide the alert service</strong> requested by the user.</li>
+        <li>ALERT <strong>does not display ads</strong> or use data for advertising segmentation.</li>
+        <li>All settings and monitoring data are <strong>processed and stored locally</strong> on the device.</li>
+        <li>The purpose of processing is solely to <strong>provide the alert service</strong> requested by the user.</li>
       </ul>
 
-      <h2>9. Third-party sharing</h2>
+      <h2>9. Sharing with third parties</h2>
       <p>
         ALERT <strong>does not share</strong> personal data with third parties for commercial or advertising purposes.
         The App may interact only with:
       </p>
       <ul>
         <li><strong>Android system services</strong> (network, battery, sensors, TTS, notifications).</li>
-        <li><strong>Google Play</strong> for App distribution and installation from the store (in closed testing or production).</li>
+        <li><strong>Google Play</strong> for App distribution and installation from the store (closed testing or production).</li>
       </ul>
-      <p>There are no developer-owned servers receiving user data.</p>
+      <p>There are no developer-owned servers that receive user data.</p>
 
       <h2>10. International transfers</h2>
       <p>
-        ALERT does not operate its own servers to collect personal data. If the user utilizes Google services
-        (Play Store, TTS engine, etc.), those services may be subject to
+        ALERT does not operate its own servers to collect personal data. If the user uses
+        Google services (Play Store, TTS engine, etc.), those services may be subject to
         <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policies</a>.
       </p>
 
       <h2>11. Security</h2>
       <p>
         Reasonable measures are applied to protect information processed locally on the device.
-        Since the App <strong>does not transmit personal data to developer servers</strong>, the risk of
+        Since the App <strong>does not transmit personal data to the developer's servers</strong>, the risk of
         remote data exposure by ALERT is limited.
       </p>
 
@@ -422,4 +397,3 @@ Aquí tienes el código completo de la política de privacidad para que lo actua
   </main>
 </body>
 </html>
-```
