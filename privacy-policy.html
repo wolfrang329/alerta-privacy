@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Política de Privacidad / Privacy Policy - ALERTA</title>
+  <title>Política de Privacidad y Términos - ALERTA</title>
   <style>
     body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; background: #f7f7f7; color: #222; }
     .container { max-width: 900px; margin: 24px auto; padding: 24px; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
@@ -28,31 +28,30 @@
       <a href="#espanol">Español</a>
       <span>|</span>
       <a href="#english">English</a>
+      <span>|</span>
+      <a href="#terminos">Términos (ES)</a>
+      <span>|</span>
+      <a href="#terms">Terms (EN)</a>
     </nav>
 
-    <!-- ==================== ESPAÑOL ==================== -->
+  <!-- ==================== ESPAÑOL - PRIVACIDAD ==================== -->
     <section id="espanol" class="lang-section" style="margin-top:0;padding-top:0;border-top:none;">
       <span class="lang-label">ES</span>
       <h1>Política de Privacidad de ALERTA</h1>
-      <p class="meta"><strong>Última actualización:</strong> 29 de septiembre de 2026</p>
+      <p class="meta"><strong>Última actualización:</strong> 10 de noviembre de 2026</p>
 
       <p>
         Esta Política de Privacidad describe cómo la aplicación <strong>ALERTA</strong>
         (paquete: <code>com.wolfrang1996.alerta</code>; en inglés puede mostrarse como <strong>ALERT</strong>)
-        utiliza, almacena de forma local y protege la información del sistema cuando usted utiliza nuestros servicios.
+        recopila, usa, almacena y protege la información cuando usted utiliza nuestros servicios.
       </p>
-
-      <div class="note">
-        <strong>Nota sobre esta versión:</strong> esta es una <strong>versión de prueba para testers</strong>.
-        Todas las funciones están desbloqueadas. <strong>No incluye compras dentro de la aplicación
-        ni procesamiento de pagos.</strong> No utiliza Google Play Billing.
-      </div>
 
       <h2>1. Responsable del tratamiento</h2>
       <ul>
         <li><strong>Aplicación:</strong> ALERTA</li>
-        <li><strong>Desarrollador:</strong> Wolfrang1996</li>
-        <li><strong>Correo de contacto:</strong> <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a></li>
+        <li><strong>Desarrollador / operador:</strong> Kaiser Devs Tech Solutions</li>
+        <li><strong>Correo de contacto y soporte:</strong>
+          <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a></li>
       </ul>
 
       <h2>2. Descripción general</h2>
@@ -71,7 +70,21 @@
         <li>Anuncio de la hora en punto (si el usuario lo activa).</li>
       </ul>
 
-      <h2>3. Datos que utiliza la aplicación</h2>
+      <h2>3. Modelo de acceso y compras</h2>
+      <p>
+        ALERTA ofrece un <strong>período de prueba gratuita de 60 días</strong> con acceso completo a las funciones.
+        Transcurrido ese período, el usuario debe adquirir <strong>ALERTA Premium</strong> mediante una
+        <strong>compra única dentro de la aplicación</strong> para seguir utilizando el servicio.
+      </p>
+      <ul>
+        <li>Producto en Google Play: <code>unlock_premium</code> (compra única, no suscripción).</li>
+        <li>Precio orientativo publicado en la ficha de Play Store (puede variar según país e impuestos).</li>
+        <li>Los pagos se procesan exclusivamente a través de <strong>Google Play Billing</strong>.</li>
+        <li>ALERTA <strong>no almacena</strong> números de tarjeta ni datos bancarios; Google gestiona el pago.</li>
+        <li>El usuario puede restaurar compras previas desde la app o desde la cuenta de Google Play.</li>
+      </ul>
+
+      <h2>4. Datos que utiliza la aplicación</h2>
       <p>
         ALERTA está diseñada para funcionar <strong>principalmente de forma local</strong> en el dispositivo
         del usuario. La App puede acceder a información del dispositivo necesaria para su funcionamiento:
@@ -84,50 +97,95 @@
         <li>Consumo de datos móviles en tiempo real (solo si el usuario activa el monitoreo).</li>
         <li>Datos del acelerómetro (solo para detectar agitación del dispositivo y pausar temporalmente las alertas de voz, si el usuario activa esta función).</li>
         <li>Preferencias del usuario: idioma, tipos de alerta, umbrales, voces TTS, sensibilidad de agitación, intervalos de monitoreo, etc.</li>
+        <li><strong>Android ID</strong> del dispositivo (uso local) para calcular el período de prueba en el teléfono.</li>
+        <li><strong>Identificador del dispositivo para el trial (deviceKey):</strong> valor <strong>hash (SHA-256)</strong> derivado del Android ID, el identificador del paquete de la app y una semilla interna; se usa para sincronizar el inicio del trial con nuestro servidor (véase sección 8). <strong>No enviamos el Android ID en texto claro.</strong></li>
+        <li><strong>Token de compra de Google Play</strong> (almacenado localmente) para verificar que el usuario adquirió Premium.</li>
+        <li>Fecha de inicio del trial (almacenada localmente y, si aplica, en el servidor asociada al deviceKey).</li>
       </ul>
       <p>
-        Esta información se <strong>procesa en el dispositivo</strong> para generar alertas, notificaciones y mensajes de voz.
-        ALERTA <strong>no vende</strong> datos personales ni los utiliza con fines publicitarios.
+        Esta información se <strong>procesa en el dispositivo</strong> para generar alertas, gestionar el acceso
+        Premium y las preferencias del usuario. ALERTA <strong>no vende</strong> datos personales ni los utiliza con fines publicitarios.
       </p>
 
-      <h2>4. Permisos del sistema Android</h2>
+      <h2>5. Permisos del sistema Android</h2>
       <p>Para ofrecer sus funciones, ALERTA puede solicitar permisos del sistema, tales como:</p>
       <ul>
-        <li><strong>Red e Internet:</strong> detectar cambios de conectividad y compatibilidad del dispositivo. La App no transmite datos personales a servidores del desarrollador.</li>
+        <li><strong>Red e Internet:</strong> detectar cambios de conectividad, comunicarse con Google Play Billing y, en circunstancias limitadas, con el servicio de sincronización del trial (sección 8). No enviamos contenido de las alertas ni datos de monitoreo a servidores del desarrollador.</li>
         <li><strong>Wi-Fi y estado de red:</strong> avisar cuando cambia la conexión.</li>
-        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> se utiliza única y exclusivamente para detectar llamadas telefónicas entrantes o en curso, permitiendo pausar automáticamente las alertas de voz para no interrumpir ni molestar al usuario durante sus conversaciones. No se usa para identificar al usuario, acceder al historial de llamadas ni crear perfiles.</li>
+        <li><strong>Estado del teléfono (<code>READ_PHONE_STATE</code>):</strong> detectar cambios de conectividad móvil; no se usa para identificar al usuario, realizar llamadas ni crear perfiles.</li>
         <li><strong>Servicio en primer plano:</strong> mantener el monitoreo activo con notificación visible al usuario.</li>
         <li><strong>Notificaciones:</strong> informar del estado del servicio y alertas (Android 13+).</li>
         <li><strong>Audio y vibración:</strong> reproducir alertas por voz y avisos hápticos.</li>
         <li><strong>Inicio automático:</strong> reiniciar el servicio tras encender el dispositivo, si el usuario lo habilita.</li>
         <li><strong>Optimización de batería:</strong> solicitar al usuario excluir la App de restricciones, si es necesario para el monitoreo en segundo plano.</li>
+        <li><strong>Almacenamiento:</strong> solo si fuera necesario por compatibilidad con versiones antiguas de Android o detección térmica del sistema.</li>
+        <li><strong>Facturación de Google Play (<code>com.android.vending.BILLING</code>):</strong> procesar la compra de ALERTA Premium.</li>
+        <li><strong>Permisos adicionales de compatibilidad:</strong> algunos permisos pueden declararse en el manifiesto por compatibilidad con distintos fabricantes y versiones de Android, sin usarse para rastrear al usuario.</li>
       </ul>
       <p>
-        <strong>Ubicación:</strong> ALERTA <strong>no solicita ni utiliza permisos de ubicación</strong> ni GPS
-        para rastrear al usuario.
+        <strong>Ubicación:</strong> ALERTA <strong>no utiliza la ubicación GPS</strong> para rastrear al usuario ni
+        para crear perfiles de localización. Si algún permiso relacionado con ubicación aparece en el sistema,
+        no se emplea para identificar la posición del usuario.
       </p>
 
-      <h2>5. Servicio en primer plano</h2>
+      <h2>6. Servicio en primer plano</h2>
       <p>
         ALERTA utiliza un <strong>servicio en primer plano</strong> para mantener activo el monitoreo en segundo plano
         y ofrecer alertas oportunas. El usuario verá una <strong>notificación persistente</strong> mientras el servicio
         esté activo. Esto es necesario para el funcionamiento principal de la App.
       </p>
 
-      <h2>6. Almacenamiento local y copias de seguridad</h2>
+      <h2>7. Almacenamiento local y copias de seguridad</h2>
       <p>
-        Las preferencias del usuario y la configuración de la App se guardan <strong>localmente</strong> en el dispositivo
-        (por ejemplo, mediante almacenamiento interno del sistema / <code>SharedPreferences</code>).
-      </p>
-      <p>
-        En esta versión de prueba <strong>no se gestionan compras, pagos ni suscripciones</strong> dentro de la aplicación.
+        Las preferencias del usuario, el estado del trial, el Android ID local y el token de compra se guardan
+        <strong>localmente</strong> en el dispositivo (mediante almacenamiento interno del sistema / <code>SharedPreferences</code>).
       </p>
       <p>
         Si el usuario activa <strong>copias de seguridad del sistema</strong> en Android, los datos locales de configuración
         de la App podrían incluirse en esa copia, según la configuración del dispositivo y del fabricante.
       </p>
 
-      <h2>7. Texto a voz (TTS)</h2>
+      <h2>8. Sincronización del período de prueba (servidor)</h2>
+      <p>
+        Para reducir el abuso del período de prueba (por ejemplo, al borrar datos de la aplicación), ALERTA puede
+        realizar una solicitud <strong>HTTPS</strong> a un servicio alojado en <strong>Cloudflare Workers</strong>
+        operado por el desarrollador (endpoint <code>registerTrial</code>).
+      </p>
+      <ul>
+        <li><strong>Cuándo se llama:</strong> no de forma continua; principalmente cuando hace falta restaurar o fijar la fecha de inicio del trial tras borrar datos locales o en la primera sincronización necesaria.</li>
+        <li><strong>Qué se envía:</strong> únicamente el <strong>deviceKey</strong> (hash SHA-256, ver sección 4). No se envían nombres, correos, ubicación, contenido de alertas ni estadísticas de uso.</li>
+        <li><strong>Qué se almacena en el servidor:</strong> para cada deviceKey, la <strong>marca de tiempo de inicio del trial</strong> (milisegundos), en almacenamiento clave-valor (Cloudflare KV), con el fin de calcular los días restantes del período de 60 días.</li>
+        <li><strong>Respuesta del servidor:</strong> fecha de inicio del trial, días restantes e indicación de si el trial expiró; la app aplica esa información localmente.</li>
+        <li><strong>Seguridad:</strong> la comunicación usa HTTPS; la app autentica la petición mediante un secreto compartido en la cabecera de la solicitud (no visible para el usuario final).</li>
+        <li><strong>Proveedor de infraestructura:</strong> Cloudflare, Inc. puede procesar la solicitud como encargado del tratamiento de infraestructura; consulte la
+          <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">política de privacidad de Cloudflare</a>.
+        </li>
+      </ul>
+      <p>
+        Si el usuario adquiere <strong>ALERTA Premium</strong>, el acceso de pago se valida mediante Google Play;
+        la sincronización del trial no sustituye la verificación de compra.
+      </p>
+
+      <h2>9. Compras in-app y Google Play Billing</h2>
+      <p>
+        ALERTA utiliza <strong>Google Play Billing</strong> para procesar la compra única de Premium
+        (<code>unlock_premium</code>). Google procesa el pago y proporciona a la App un token de compra para
+        verificar el acceso. ALERTA:
+      </p>
+      <ul>
+        <li>No recopila ni almacena datos de tarjetas de crédito o débito.</li>
+        <li>Almacena localmente el token de compra para habilitar Premium sin conexión permanente.</li>
+        <li>Verifica compras existentes al iniciar la App mediante los servicios de Google Play.</li>
+        <li>Permite restaurar compras vinculadas a la cuenta de Google Play del usuario.</li>
+      </ul>
+      <p>
+        Las transacciones están sujetas a las
+        <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldl=es_ES&amp;ldo=0&amp;ldt=buyertos" target="_blank" rel="noopener">condiciones de pago de Google Play</a>
+        y a la
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.
+      </p>
+
+      <h2>10. Texto a voz (TTS)</h2>
       <p>
         Las alertas por voz utilizan el <strong>motor de texto a voz (TTS)</strong> instalado en el dispositivo del usuario
         (servicios del sistema o de Google, según configuración). ALERTA <strong>no envía</strong> el contenido de las
@@ -135,106 +193,115 @@
         el proveedor TTS configurado por el sistema.
       </p>
 
-      <h2>8. Recopilación, uso y finalidad de los datos</h2>
+      <h2>11. Recopilación, uso y finalidad de los datos</h2>
       <ul>
-        <li>ALERTA <strong>no recopila, vende ni comparte</strong> datos personales de forma remota con fines comerciales o publicitarios.</li>
-        <li>ALERTA <strong>no muestra publicidad</strong> ni utiliza datos para segmentación publicitaria.</li>
-        <li>Toda la configuración y los datos de monitoreo se <strong>procesan y almacenan localmente</strong> en el dispositivo.</li>
-        <li>La finalidad del tratamiento es exclusivamente <strong>prestar el servicio de alertas</strong> solicitado por el usuario.</li>
+        <li>ALERTA <strong>no vende ni comparte</strong> datos personales con fines publicitarios.</li>
+        <li>ALERTA <strong>no muestra publicidad</strong> de terceros ni utiliza datos para segmentación publicitaria en la versión actual.</li>
+        <li>La configuración, los datos de monitoreo y el estado de compra se <strong>procesan y almacenan localmente</strong>, salvo el deviceKey y la fecha de inicio del trial en el servidor (sección 8) y los datos procesados por Google Play al realizar una compra.</li>
+        <li>La finalidad del tratamiento es <strong>prestar el servicio de alertas</strong>, <strong>gestionar el período de prueba</strong> y <strong>gestionar el acceso Premium</strong>.</li>
       </ul>
 
-      <h2>9. Compartición con terceros</h2>
+      <h2>12. Compartición con terceros</h2>
       <p>
-        ALERTA <strong>no comparte</strong> datos personales con terceros con fines comerciales o publicitarios.
-        La App puede interactuar únicamente con:
+        ALERTA no comparte datos con fines publicitarios. La App puede interactuar con:
       </p>
       <ul>
         <li><strong>Servicios del sistema Android</strong> (red, batería, sensores, TTS, notificaciones).</li>
-        <li><strong>Google Play</strong> para distribución e instalación de la App desde la tienda (en pruebas cerradas o producción).</li>
+        <li><strong>Google Play</strong> para distribución, facturación (<code>unlock_premium</code>) y verificación de compras.</li>
+        <li><strong>Cloudflare</strong> como proveedor de infraestructura para la sincronización del trial (sección 8), recibiendo únicamente el deviceKey y almacenando la marca de tiempo de inicio del trial.</li>
       </ul>
-      <p>No existen servidores propios del desarrollador que reciban datos de los usuarios.</p>
 
-      <h2>10. Transferencias internacionales</h2>
+      <h2>13. Transferencias internacionales</h2>
       <p>
-        ALERTA no opera servidores propios para recopilar datos personales. Si el usuario utiliza servicios de
-        Google (Play Store, motor TTS, etc.), dichos servicios pueden estar sujetos a las
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">políticas de privacidad de Google</a>.
+        El servicio de sincronización del trial puede alojarse en infraestructura de Cloudflare con presencia global.
+        Google Play y otros servicios de Google pueden tratar datos según sus propias políticas. Consulte la
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>
+        y la de
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a>.
       </p>
 
-      <h2>11. Seguridad</h2>
+      <h2>14. Seguridad</h2>
       <p>
-        Se aplican medidas razonables para proteger la información procesada localmente en el dispositivo.
-        Dado que la App <strong>no transmite datos personales a servidores del desarrollador</strong>, el riesgo de
-        exposición remota de datos por parte de ALERTA es limitado.
+        Se aplican medidas razonables para proteger la información procesada localmente y en tránsito (HTTPS).
+        Solo se transmite al servidor el identificador hash del dispositivo y se almacena la fecha de inicio del trial.
+        La verificación de compras se realiza mediante los mecanismos seguros de Google Play Billing.
       </p>
 
-      <h2>12. Conservación de los datos</h2>
-      <p>
-        La configuración y los datos locales se conservan en el dispositivo hasta que el usuario:
-      </p>
+      <h2>15. Conservación de los datos</h2>
+      <p>La configuración y los datos locales se conservan en el dispositivo hasta que el usuario:</p>
       <ul>
         <li>Modifica o desactiva funciones desde la App.</li>
         <li>Desinstala la App.</li>
         <li>Borra los datos de la aplicación desde los ajustes del sistema Android.</li>
       </ul>
+      <p>
+        En el servidor, el registro del trial (deviceKey + fecha de inicio) puede conservarse mientras sea necesario
+        para administrar el período de prueba y prevenir abusos. No incluye datos de contacto del usuario.
+      </p>
+      <p>
+        El estado de compra verificado por Google Play permanece vinculado a la cuenta de Google del usuario
+        y puede restaurarse al reinstalar la App.
+      </p>
 
-      <h2>13. Derechos del usuario</h2>
+      <h2>16. Derechos del usuario</h2>
       <p>El usuario puede en cualquier momento:</p>
       <ul>
         <li>Desactivar alertas y el servicio desde la configuración de la App.</li>
         <li>Revocar permisos desde los <strong>Ajustes → Aplicaciones → ALERTA → Permisos</strong> de Android.</li>
+        <li>Restaurar una compra previa desde la App o desde Google Play.</li>
+        <li>Solicitar reembolso conforme a las políticas de Google Play (dentro del plazo que Google establezca).</li>
         <li>Desinstalar la App, lo que elimina los datos locales asociados (salvo copias de seguridad del sistema, si las hubiera).</li>
         <li>Agitar el dispositivo para silenciar alertas temporalmente (~30 segundos), si activó esa función.</li>
+        <li>Contactarnos para consultas sobre privacidad o eliminación del registro de trial en servidor (indicando, si es posible, la cuenta de Google Play usada en la compra).</li>
       </ul>
       <p>
-        Para consultas sobre privacidad, escriba a:
+        Para consultas sobre privacidad o compras, escriba a:
         <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>.
         Responderemos en un plazo razonable.
       </p>
 
-      <h2>14. Menores de edad</h2>
+      <h2>17. Menores de edad</h2>
       <p>
         La App está dirigida al público general. No recopilamos intencionalmente información personal de menores
         de edad. Si un padre o tutor tiene dudas, puede contactarnos en el correo indicado.
       </p>
 
-      <h2>15. Cambios en esta política</h2>
+      <h2>18. Cambios en esta política</h2>
       <p>
-        Podemos actualizar esta Política de Privacidad cuando sea necesario (por ejemplo, al publicar una versión
-        de producción con compras, o al modificar permisos). La versión vigente estará siempre disponible en
-        esta URL pública. La fecha de <strong>Última actualización</strong> indicará la revisión más reciente.
+        Podemos actualizar esta Política de Privacidad cuando sea necesario (por ejemplo, al modificar funciones,
+        permisos, el servicio de trial o el modelo de compra). La versión vigente estará siempre disponible en esta URL pública.
+        La fecha de <strong>Última actualización</strong> indicará la revisión más reciente.
       </p>
 
-      <h2>16. Contacto</h2>
+      <h2>19. Contacto</h2>
       <p>
         Si tiene preguntas sobre esta Política de Privacidad, escríbanos a:<br />
         <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>
       </p>
+      <p class="note">
+        Los <strong>Términos del servicio</strong> de ALERTA se encuentran en la misma página, sección
+        <a href="#terminos">Términos del servicio (español)</a>.
+      </p>
     </section>
 
-    <!-- ==================== ENGLISH ==================== -->
+  <!-- ==================== ENGLISH - PRIVACY ==================== -->
     <section id="english" class="lang-section">
       <span class="lang-label">EN</span>
       <h1>ALERT Privacy Policy</h1>
-      <p class="meta"><strong>Last updated:</strong> September 29, 2026</p>
+      <p class="meta"><strong>Last updated:</strong> November 10, 2026</p>
 
       <p>
         This Privacy Policy describes how the <strong>ALERT</strong> application
         (package: <code>com.wolfrang1996.alerta</code>; in Spanish it may appear as <strong>ALERTA</strong>)
-        uses, stores locally, and protects system information when you use our services.
+        collects, uses, stores, and protects information when you use our services.
       </p>
-
-      <div class="note">
-        <strong>Note about this version:</strong> this is a <strong>tester build for internal testing</strong>.
-        All features are unlocked. <strong>It does not include in-app purchases or payment processing.</strong>
-        Google Play Billing is not used.
-      </div>
 
       <h2>1. Data controller</h2>
       <ul>
         <li><strong>Application:</strong> ALERT / ALERTA</li>
-        <li><strong>Developer:</strong> Wolfrang1996</li>
-        <li><strong>Contact email:</strong> <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a></li>
+        <li><strong>Developer / trader:</strong> Kaiser Devs Tech Solutions</li>
+        <li><strong>Contact and support email:</strong>
+          <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a></li>
       </ul>
 
       <h2>2. Overview</h2>
@@ -253,7 +320,21 @@
         <li>Hour announcements on the hour (if the user enables this feature).</li>
       </ul>
 
-      <h2>3. Data used by the application</h2>
+      <h2>3. Access model and purchases</h2>
+      <p>
+        ALERT offers a <strong>60-day free trial</strong> with full access to all features.
+        After the trial period, the user must purchase <strong>ALERT Premium</strong> through a
+        <strong>one-time in-app purchase</strong> to continue using the service.
+      </p>
+      <ul>
+        <li>Google Play product: <code>unlock_premium</code> (one-time purchase, not a subscription).</li>
+        <li>List price is shown on the Play Store listing (may vary by country and taxes).</li>
+        <li>Payments are processed exclusively through <strong>Google Play Billing</strong>.</li>
+        <li>ALERT <strong>does not store</strong> credit card or banking details; Google handles payment processing.</li>
+        <li>Users can restore previous purchases from the app or their Google Play account.</li>
+      </ul>
+
+      <h2>4. Data used by the application</h2>
       <p>
         ALERT is designed to work <strong>primarily locally</strong> on the user's device.
         The App may access device information necessary for its operation:
@@ -266,50 +347,95 @@
         <li>Real-time mobile data consumption (only if the user enables monitoring).</li>
         <li>Accelerometer data (only to detect device shake and temporarily pause voice alerts, if the user enables this feature).</li>
         <li>User preferences: language, alert types, thresholds, TTS voices, shake sensitivity, monitoring intervals, etc.</li>
+        <li><strong>Android ID</strong> (local use) to calculate the trial period on the device.</li>
+        <li><strong>Trial device identifier (deviceKey):</strong> a <strong>SHA-256 hash</strong> derived from the Android ID, the app package name, and an internal salt; used to sync trial start with our server (see section 8). <strong>We do not send the raw Android ID.</strong></li>
+        <li><strong>Google Play purchase token</strong> (stored locally) to verify Premium access.</li>
+        <li>Trial start timestamp (stored locally and, where applicable, on the server linked to the deviceKey).</li>
       </ul>
       <p>
-        This information is <strong>processed on the device</strong> to generate alerts, notifications, and voice messages.
-        ALERT <strong>does not sell</strong> personal data or use it for advertising purposes.
+        This information is <strong>processed on the device</strong> to generate alerts, manage Premium access,
+        and store user preferences. ALERT <strong>does not sell</strong> personal data or use it for advertising purposes.
       </p>
 
-      <h2>4. Android system permissions</h2>
+      <h2>5. Android system permissions</h2>
       <p>To provide its features, ALERT may request system permissions such as:</p>
       <ul>
-        <li><strong>Network and Internet:</strong> detect connectivity changes and device compatibility. The App does not transmit personal data to the developer's servers.</li>
+        <li><strong>Network and Internet:</strong> detect connectivity changes, communicate with Google Play Billing, and in limited cases with the trial sync service (section 8). We do not upload alert content or monitoring statistics to developer servers.</li>
         <li><strong>Wi-Fi and network state:</strong> notify when the connection changes.</li>
-        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> used solely and exclusively to detect incoming or ongoing phone calls, allowing the app to automatically pause voice alerts so as not to interrupt or disturb the user during conversations. It is not used to identify the user, access call logs, or create profiles.</li>
+        <li><strong>Phone state (<code>READ_PHONE_STATE</code>):</strong> detect mobile connectivity changes; not used to identify the user, make calls, or build profiles.</li>
         <li><strong>Foreground service:</strong> keep monitoring active with a visible notification.</li>
         <li><strong>Notifications:</strong> inform about service status and alerts (Android 13+).</li>
         <li><strong>Audio and vibration:</strong> play voice alerts and haptic feedback.</li>
         <li><strong>Auto-start:</strong> restart the service after device reboot, if the user enables it.</li>
         <li><strong>Battery optimization:</strong> ask the user to exclude the App from restrictions, if needed for background monitoring.</li>
+        <li><strong>Storage:</strong> only if required for compatibility with older Android versions or system thermal detection.</li>
+        <li><strong>Google Play Billing (<code>com.android.vending.BILLING</code>):</strong> process the ALERT Premium purchase.</li>
+        <li><strong>Additional compatibility permissions:</strong> some permissions may be declared in the App manifest for compatibility with different manufacturers and Android versions, without being used to track the user.</li>
       </ul>
       <p>
-        <strong>Location:</strong> ALERT <strong>does not request or use location permissions</strong> or GPS
-        to track the user.
+        <strong>Location:</strong> ALERT <strong>does not use GPS location</strong> to track the user or
+        build location profiles. If any location-related permission appears in the system,
+        it is not used to identify the user's position.
       </p>
 
-      <h2>5. Foreground service</h2>
+      <h2>6. Foreground service</h2>
       <p>
         ALERT uses a <strong>foreground service</strong> to keep background monitoring active
         and deliver timely alerts. The user will see a <strong>persistent notification</strong> while the service
         is running. This is required for the App's core functionality.
       </p>
 
-      <h2>6. Local storage and backups</h2>
+      <h2>7. Local storage and backups</h2>
       <p>
-        User preferences and App settings are stored <strong>locally</strong> on the device
-        (for example, via system internal storage / <code>SharedPreferences</code>).
-      </p>
-      <p>
-        In this tester version, <strong>no purchases, payments, or subscriptions</strong> are managed within the application.
+        User preferences, trial status, local Android ID, and purchase token are stored
+        <strong>locally</strong> on the device (via system internal storage / <code>SharedPreferences</code>).
       </p>
       <p>
         If the user enables <strong>system backups</strong> on Android, local App configuration data
         may be included in that backup, depending on device and manufacturer settings.
       </p>
 
-      <h2>7. Text-to-speech (TTS)</h2>
+      <h2>8. Trial period sync (server)</h2>
+      <p>
+        To reduce trial abuse (for example after clearing app data), ALERT may send an
+        <strong>HTTPS</strong> request to a <strong>Cloudflare Workers</strong> service operated by the developer
+        (<code>registerTrial</code> endpoint).
+      </p>
+      <ul>
+        <li><strong>When it is called:</strong> not continuously; mainly when the trial start date must be restored or set after clearing local data, or on the first required sync.</li>
+        <li><strong>What is sent:</strong> only the <strong>deviceKey</strong> (SHA-256 hash, see section 4). We do not send names, emails, location, alert content, or usage analytics.</li>
+        <li><strong>What is stored on the server:</strong> for each deviceKey, the <strong>trial start timestamp</strong> (milliseconds) in key-value storage (Cloudflare KV), to calculate remaining days in the 60-day period.</li>
+        <li><strong>Server response:</strong> trial start time, remaining days, and whether the trial expired; the app applies this locally.</li>
+        <li><strong>Security:</strong> communication uses HTTPS; the app authenticates the request with a shared secret in a request header (not visible to end users).</li>
+        <li><strong>Infrastructure provider:</strong> Cloudflare, Inc. may process the request as infrastructure provider; see
+          <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's privacy policy</a>.
+        </li>
+      </ul>
+      <p>
+        If the user purchases <strong>ALERT Premium</strong>, paid access is validated through Google Play;
+        trial sync does not replace purchase verification.
+      </p>
+
+      <h2>9. In-app purchases and Google Play Billing</h2>
+      <p>
+        ALERT uses <strong>Google Play Billing</strong> to process the one-time Premium purchase
+        (<code>unlock_premium</code>). Google processes the payment and provides the App with a purchase token
+        to verify access. ALERT:
+      </p>
+      <ul>
+        <li>Does not collect or store credit or debit card details.</li>
+        <li>Stores the purchase token locally to enable Premium without a permanent connection.</li>
+        <li>Verifies existing purchases on App startup through Google Play services.</li>
+        <li>Allows restoring purchases linked to the user's Google Play account.</li>
+      </ul>
+      <p>
+        Transactions are subject to
+        <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldl=en_GB&amp;ldo=0&amp;ldt=buyertos" target="_blank" rel="noopener">Google Play payment terms</a>
+        and
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.
+      </p>
+
+      <h2>10. Text-to-speech (TTS)</h2>
       <p>
         Voice alerts use the <strong>text-to-speech (TTS) engine</strong> installed on the user's device
         (system or Google services, depending on configuration). ALERT <strong>does not send</strong> alert content
@@ -317,79 +443,269 @@
         the TTS provider configured by the system.
       </p>
 
-      <h2>8. Data collection, use, and purpose</h2>
+      <h2>11. Data collection, use, and purpose</h2>
       <ul>
-        <li>ALERT <strong>does not collect, sell, or share</strong> personal data remotely for commercial or advertising purposes.</li>
-        <li>ALERT <strong>does not display ads</strong> or use data for advertising segmentation.</li>
-        <li>All settings and monitoring data are <strong>processed and stored locally</strong> on the device.</li>
-        <li>The purpose of processing is solely to <strong>provide the alert service</strong> requested by the user.</li>
+        <li>ALERT <strong>does not sell or share</strong> personal data for advertising purposes.</li>
+        <li>ALERT <strong>does not display third-party ads</strong> or use data for ad targeting in the current version.</li>
+        <li>Settings, monitoring data, and purchase status are <strong>processed and stored locally</strong>, except the deviceKey and trial start on the server (section 8) and data processed by Google Play when making a purchase.</li>
+        <li>The purpose of processing is to <strong>provide the alert service</strong>, <strong>manage the trial period</strong>, and <strong>manage Premium access</strong>.</li>
       </ul>
 
-      <h2>9. Sharing with third parties</h2>
+      <h2>12. Sharing with third parties</h2>
       <p>
-        ALERT <strong>does not share</strong> personal data with third parties for commercial or advertising purposes.
-        The App may interact only with:
+        ALERT does not share data for advertising. The App may interact with:
       </p>
       <ul>
         <li><strong>Android system services</strong> (network, battery, sensors, TTS, notifications).</li>
-        <li><strong>Google Play</strong> for App distribution and installation from the store (closed testing or production).</li>
+        <li><strong>Google Play</strong> for distribution, billing (<code>unlock_premium</code>), and purchase verification.</li>
+        <li><strong>Cloudflare</strong> as infrastructure provider for trial sync (section 8), receiving only the deviceKey and storing the trial start timestamp.</li>
       </ul>
-      <p>There are no developer-owned servers that receive user data.</p>
 
-      <h2>10. International transfers</h2>
+      <h2>13. International transfers</h2>
       <p>
-        ALERT does not operate its own servers to collect personal data. If the user uses
-        Google services (Play Store, TTS engine, etc.), those services may be subject to
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policies</a>.
+        The trial sync service may run on Cloudflare's global infrastructure.
+        Google Play and other Google services may process data under their own policies. See
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>
+        and
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's privacy policy</a>.
       </p>
 
-      <h2>11. Security</h2>
+      <h2>14. Security</h2>
       <p>
-        Reasonable measures are applied to protect information processed locally on the device.
-        Since the App <strong>does not transmit personal data to the developer's servers</strong>, the risk of
-        remote data exposure by ALERT is limited.
+        Reasonable measures protect data processed locally and in transit (HTTPS).
+        Only the hashed device identifier is transmitted to the server, with the trial start date stored there.
+        Purchase verification uses Google Play Billing's secure mechanisms.
       </p>
 
-      <h2>12. Data retention</h2>
-      <p>
-        Settings and local data remain on the device until the user:
-      </p>
+      <h2>15. Data retention</h2>
+      <p>Settings and local data remain on the device until the user:</p>
       <ul>
         <li>Modifies or disables features from the App.</li>
         <li>Uninstalls the App.</li>
         <li>Clears App data from Android system settings.</li>
       </ul>
+      <p>
+        On the server, trial records (deviceKey + start timestamp) may be kept as needed to administer the trial
+        and prevent abuse. They do not include user contact details.
+      </p>
+      <p>
+        Verified purchase status from Google Play remains linked to the user's Google account
+        and can be restored when reinstalling the App.
+      </p>
 
-      <h2>13. User rights</h2>
+      <h2>16. User rights</h2>
       <p>The user may at any time:</p>
       <ul>
         <li>Disable alerts and the service from the App settings.</li>
         <li>Revoke permissions from <strong>Settings → Apps → ALERT → Permissions</strong> on Android.</li>
+        <li>Restore a previous purchase from the App or Google Play.</li>
+        <li>Request a refund according to Google Play policies (within Google's applicable timeframe).</li>
         <li>Uninstall the App, which removes associated local data (except system backups, if any).</li>
         <li>Shake the device to temporarily silence alerts (~30 seconds), if that feature is enabled.</li>
+        <li>Contact us about privacy or deletion of the server-side trial record (include your Google Play account used for purchase if possible).</li>
       </ul>
       <p>
-        For privacy inquiries, email:
+        For privacy or purchase inquiries, email:
         <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>.
         We will respond within a reasonable timeframe.
       </p>
 
-      <h2>14. Children</h2>
+      <h2>17. Children</h2>
       <p>
         The App is intended for the general public. We do not intentionally collect personal information from children.
         If a parent or guardian has concerns, they may contact us at the email above.
       </p>
 
-      <h2>15. Changes to this policy</h2>
+      <h2>18. Changes to this policy</h2>
       <p>
-        We may update this Privacy Policy when necessary (for example, when publishing a production version
-        with purchases, or when modifying permissions). The current version will always be available at
+        We may update this Privacy Policy when necessary (for example when modifying features,
+        permissions, the trial service, or the purchase model). The current version will always be available at
         this public URL. The <strong>Last updated</strong> date will indicate the most recent revision.
       </p>
 
-      <h2>16. Contact</h2>
+      <h2>19. Contact</h2>
       <p>
         If you have questions about this Privacy Policy, contact us at:<br />
+        <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>
+      </p>
+      <p class="note">
+        <strong>Terms of Service</strong> for ALERT are on this same page:
+        <a href="#terms">Terms of Service (English)</a>.
+      </p>
+    </section>
+
+  <!-- ==================== TÉRMINOS ES ==================== -->
+    <section id="terminos" class="lang-section">
+      <span class="lang-label">ES — Términos</span>
+      <h1>Términos del servicio de ALERTA</h1>
+      <p class="meta"><strong>Última actualización:</strong> 10 de noviembre de 2026</p>
+
+      <p>
+        Estos Términos del servicio («Términos») regulan el uso de la aplicación <strong>ALERTA</strong>
+        (<code>com.wolfrang1996.alerta</code>), ofrecida por <strong>Kaiser Devs Tech Solutions</strong> («nosotros»).
+        Al descargar, instalar o usar la App, usted acepta estos Términos y nuestra
+        <a href="#espanol">Política de Privacidad</a>.
+      </p>
+
+      <h2>1. Objeto del servicio</h2>
+      <p>
+        ALERTA proporciona alertas por voz y monitoreo de eventos del dispositivo según la configuración del usuario.
+        El servicio se ofrece «tal cual», sujeto a las limitaciones del hardware, del sistema Android y de los permisos concedidos.
+      </p>
+
+      <h2>2. Licencia de uso</h2>
+      <p>
+        Le concedemos una licencia limitada, no exclusiva, no transferible y revocable para usar la App en dispositivos
+        que usted posea o controle, conforme a estos Términos y a las reglas de Google Play.
+        No puede descompilar, modificar, revender ni redistribuir la App salvo lo permitido por la ley aplicable.
+      </p>
+
+      <h2>3. Período de prueba y ALERTA Premium</h2>
+      <ul>
+        <li>Tras instalar la App, puede disponer de un <strong>período de prueba gratuito de 60 días</strong> con acceso completo, salvo que ya hubiera agotado el trial para ese dispositivo según nuestros registros (incluida la sincronización del trial descrita en la Política de Privacidad).</li>
+        <li>Al finalizar el trial, debe adquirir <strong>ALERTA Premium</strong> (producto <code>unlock_premium</code>, compra única) para seguir usando el servicio.</li>
+        <li>El precio y la moneda se muestran en Google Play antes de confirmar la compra.</li>
+      </ul>
+
+      <h2>4. Pagos, facturación y reembolsos</h2>
+      <p>
+        Los pagos los procesa <strong>Google Play</strong>. No somos responsables de errores de facturación ajenos a nuestra App.
+        Los reembolsos se solicitan conforme a las políticas de Google Play, no directamente a través de tarjetas o transferencias al desarrollador.
+        Usted puede restaurar compras vinculadas a su cuenta de Google Play desde la App.
+      </p>
+
+      <h2>5. Uso aceptable</h2>
+      <p>Usted se compromete a no:</p>
+      <ul>
+        <li>Utilizar la App de forma que infrinja leyes o derechos de terceros.</li>
+        <li>Intentar eludir el período de prueba, el cobro Premium o las medidas de seguridad del servicio de trial.</li>
+        <li>Interferir con el funcionamiento de la App o de los servicios de Google Play.</li>
+      </ul>
+
+      <h2>6. Sin garantías</h2>
+      <p>
+        En la medida permitida por la ley, la App se proporciona sin garantías de disponibilidad ininterrumpida,
+        ausencia de errores o idoneidad para un fin particular. Los fabricantes de dispositivos pueden limitar
+        servicios en segundo plano, TTS o sensores; ello puede afectar el comportamiento de las alertas.
+      </p>
+
+      <h2>7. Limitación de responsabilidad</h2>
+      <p>
+        En la medida permitida por la ley aplicable, Kaiser Devs Tech Solutions no será responsable por daños indirectos,
+        lucro cesante o pérdida de datos derivados del uso o la imposibilidad de uso de la App.
+        Nuestra responsabilidad total no excederá el importe que usted haya pagado por ALERTA Premium en los últimos
+        doce (12) meses, si corresponde.
+      </p>
+
+      <h2>8. Privacidad</h2>
+      <p>
+        El tratamiento de datos personales se describe en la
+        <a href="#espanol">Política de Privacidad</a>, que forma parte de estos Términos.
+      </p>
+
+      <h2>9. Cambios</h2>
+      <p>
+        Podemos actualizar la App, el modelo de cobro o estos Términos. Publicaremos la versión actualizada en esta URL.
+        El uso continuado tras un cambio razonable implica la aceptación de los Términos revisados, salvo que la ley exija otro procedimiento.
+      </p>
+
+      <h2>10. Ley aplicable</h2>
+      <p>
+        Estos Términos se rigen por las leyes de la <strong>República Argentina</strong>, sin perjuicio de las normas imperativas
+        de protección al consumidor que puedan aplicarse en su país de residencia cuando corresponda.
+      </p>
+
+      <h2>11. Contacto</h2>
+      <p>
+        Operador / soporte: Kaiser Devs Tech Solutions — 
+        <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>
+      </p>
+    </section>
+
+  <!-- ==================== TERMS EN ==================== -->
+    <section id="terms" class="lang-section">
+      <span class="lang-label">EN — Terms</span>
+      <h1>ALERT Terms of Service</h1>
+      <p class="meta"><strong>Last updated:</strong> November 10, 2026</p>
+
+      <p>
+        These Terms of Service («Terms») govern your use of the <strong>ALERT</strong> application
+        (<code>com.wolfrang1996.alerta</code>), provided by <strong>Kaiser Devs Tech Solutions</strong> («we», «us»).
+        By downloading, installing, or using the App, you agree to these Terms and our
+        <a href="#english">Privacy Policy</a>.
+      </p>
+
+      <h2>1. Service description</h2>
+      <p>
+        ALERT provides voice alerts and monitoring of device events according to your settings.
+        The service is provided «as is», subject to hardware, Android, and permission limitations.
+      </p>
+
+      <h2>2. License</h2>
+      <p>
+        We grant you a limited, non-exclusive, non-transferable, revocable license to use the App on devices
+        you own or control, in accordance with these Terms and Google Play rules.
+        You may not decompile, modify, resell, or redistribute the App except as allowed by applicable law.
+      </p>
+
+      <h2>3. Trial and ALERT Premium</h2>
+      <ul>
+        <li>After installation, you may receive a <strong>60-day free trial</strong> with full access, unless the trial was already used for that device according to our records (including trial sync as described in the Privacy Policy).</li>
+        <li>After the trial, you must purchase <strong>ALERT Premium</strong> (<code>unlock_premium</code>, one-time purchase) to continue using the service.</li>
+        <li>Price and currency are shown on Google Play before you confirm payment.</li>
+      </ul>
+
+      <h2>4. Payments, billing, and refunds</h2>
+      <p>
+        Payments are processed by <strong>Google Play</strong>. We are not responsible for billing errors outside our App.
+        Refunds are requested under Google Play policies, not by direct payment to the developer.
+        You may restore purchases linked to your Google Play account from within the App.
+      </p>
+
+      <h2>5. Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the App in violation of laws or third-party rights.</li>
+        <li>Attempt to bypass the trial, Premium payment, or trial security measures.</li>
+        <li>Interfere with the App or Google Play services.</li>
+      </ul>
+
+      <h2>6. Disclaimer</h2>
+      <p>
+        To the extent permitted by law, the App is provided without warranties of uninterrupted availability,
+        error-free operation, or fitness for a particular purpose. Device manufacturers may restrict
+        background services, TTS, or sensors, which may affect alerts.
+      </p>
+
+      <h2>7. Limitation of liability</h2>
+      <p>
+        To the extent permitted by applicable law, Kaiser Devs Tech Solutions is not liable for indirect damages,
+        loss of profits, or data loss arising from use or inability to use the App.
+        Our total liability shall not exceed the amount you paid for ALERT Premium in the preceding
+        twelve (12) months, if any.
+      </p>
+
+      <h2>8. Privacy</h2>
+      <p>
+        Personal data processing is described in the
+        <a href="#english">Privacy Policy</a>, which is part of these Terms.
+      </p>
+
+      <h2>9. Changes</h2>
+      <p>
+        We may update the App, pricing, or these Terms. The current version will be posted at this URL.
+        Continued use after a reasonable update constitutes acceptance of the revised Terms, unless law requires otherwise.
+      </p>
+
+      <h2>10. Governing law</h2>
+      <p>
+        These Terms are governed by the laws of the <strong>Argentine Republic</strong>, without prejudice to mandatory
+        consumer protection rules that may apply in your country of residence where applicable.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        Trader / support: Kaiser Devs Tech Solutions —
         <a href="mailto:kaiser.devs.tech.solutions@gmail.com">kaiser.devs.tech.solutions@gmail.com</a>
       </p>
     </section>
